@@ -1,0 +1,165 @@
+2026-04-03 17:29:05 | INFO     | __main__:test_config:6 | Testing Configuration Loader...
+2026-04-03 17:29:05 | INFO     | __main__:test_config:8 | Database Host: localhost
+2026-04-03 17:29:05 | INFO     | __main__:test_config:9 | Database Port: 5432
+2026-04-03 17:29:05 | INFO     | __main__:test_config:10 | Redis Host: localhost
+2026-04-03 17:29:05 | INFO     | __main__:test_config:11 | Model Path: data/models/
+2026-04-03 17:29:05 | INFO     | __main__:test_config:12 | Computed DB URL: postgresql://postgres:your_password@localhost:5432/phishing_detector
+2026-04-03 17:29:05 | INFO     | __main__:test_config:13 | Computed Redis URL: redis://localhost:6379/0
+2026-04-03 17:29:05 | INFO     | __main__:test_logging:16 | Testing Logging System...
+2026-04-03 17:29:05 | WARNING  | __main__:test_logging:17 | This is a warning message.
+2026-04-03 17:29:05 | ERROR    | __main__:test_logging:18 | This is an error message.
+2026-04-03 17:29:05 | ERROR    | __main__:test_logging:22 | Caught an intentional exception for testing.
+Traceback (most recent call last):
+
+  File "C:\Users\frank\OneDrive\Desktop\Projects\Phishing URL Detection\tests\verify_core.py", line 32, in <module>
+    test_logging()
+    └ <function test_logging at 0x000001A70E928040>
+
+> File "C:\Users\frank\OneDrive\Desktop\Projects\Phishing URL Detection\tests\verify_core.py", line 20, in test_logging
+    1 / 0
+
+ZeroDivisionError: division by zero
+2026-04-03 17:29:05 | SUCCESS  | __main__:test_logging:26 | Verification Successful: logs/app.log file was created.
+2026-04-03 17:32:22 | INFO     | __main__:verify_url_features:15 | Starting structural URL feature verification...
+2026-04-03 17:32:22 | INFO     | __main__:verify_url_features:18 | --- Analyzing: https://www.google.com ---
+2026-04-03 17:32:22 | INFO     | __main__:verify_url_features:18 | --- Analyzing: http://127.0.0.1:8080/login ---
+2026-04-03 17:32:22 | INFO     | __main__:verify_url_features:18 | --- Analyzing: https://security-update-verification.account-protection.com/validate?user=@admin&token=123_456#home ---
+2026-04-03 17:32:22 | INFO     | __main__:verify_url_features:18 | --- Analyzing: https://sub.sub2.sub3.example.co.uk/path/to/resource?q=search ---
+2026-04-03 17:32:22 | INFO     | __main__:verify_url_features:18 | --- Analyzing: http://phish-site.net/webscr?cmd=_login-run&dispatch=5885d80a13c0db1f8e263663d3faee8d66f314291 ---
+2026-04-03 17:35:46 | WARNING  | src.external.cache_manager:__init__:26 | Redis Cache unavailable: Error 10061 connecting to localhost:6379. No connection could be made because the target machine actively refused it.. Falling back to no-cache mode.
+2026-04-03 17:35:46 | INFO     | __main__:verify_external_clients:15 | --- 🚀 STAGE 1: External Query Verification (google.com) ---
+2026-04-03 17:35:46 | INFO     | __main__:verify_external_clients:18 | Testing WHOIS Client...
+2026-04-03 17:35:46 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: google.com
+2026-04-03 17:35:48 | INFO     | __main__:verify_external_clients:21 | WHOIS Response (Time: 1.66s):
+2026-04-03 17:35:48 | SUCCESS  | __main__:verify_external_clients:23 | Registrar: MarkMonitor, Inc.
+2026-04-03 17:35:48 | INFO     | __main__:verify_external_clients:24 | Creation Date: 1997-09-15T04:00:00+00:00
+2026-04-03 17:35:48 | INFO     | __main__:verify_external_clients:29 | Testing DNS Resolver...
+2026-04-03 17:35:48 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: google.com
+2026-04-03 17:36:02 | INFO     | __main__:verify_external_clients:32 | DNS Response (Time: 14.27s):
+2026-04-03 17:36:02 | SUCCESS  | __main__:verify_external_clients:34 | A Records: ['172.217.24.110']
+2026-04-03 17:36:02 | INFO     | __main__:verify_external_clients:35 | Record Count: 21
+2026-04-03 17:36:02 | INFO     | __main__:verify_external_clients:40 | Testing SSL Checker...
+2026-04-03 17:36:02 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: google.com
+2026-04-03 17:36:02 | INFO     | __main__:verify_external_clients:43 | SSL Response (Time: 0.26s):
+2026-04-03 17:36:02 | SUCCESS  | __main__:verify_external_clients:45 | Issuer: countryName=US, organizationName=Google Trust Services, commonName=WR2
+2026-04-03 17:36:02 | INFO     | __main__:verify_external_clients:46 | Valid Until: 2026-06-08T08:36:31
+2026-04-03 17:36:02 | INFO     | __main__:verify_external_clients:50 | --- ♻️ STAGE 2: Cache Verification (google.com) ---
+2026-04-03 17:36:02 | INFO     | __main__:verify_external_clients:53 | Repeating WHOIS lookup to verify cache hit...
+2026-04-03 17:36:02 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: google.com
+2026-04-03 17:36:04 | WARNING  | __main__:verify_external_clients:61 | Cache Hit not detected OR slow Redis (Duration: 1617.02ms)
+2026-04-03 17:38:13 | WARNING  | src.external.cache_manager:__init__:26 | Redis Cache unavailable: Error 10061 connecting to localhost:6379. No connection could be made because the target machine actively refused it.. Falling back to no-cache mode.
+2026-04-03 17:38:13 | INFO     | __main__:verify_domain_features:12 | Starting Domain Metadata and String analysis verification...
+2026-04-03 17:38:13 | INFO     | __main__:verify_domain_features:15 | --- 🚀 Analyzing: https://www.google.com ---
+2026-04-03 17:38:13 | INFO     | src.features.domain_features:extract:47 | Extracting domain features for: www.google.com
+2026-04-03 17:38:13 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: www.google.com
+2026-04-03 17:38:14 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: www.google.com
+2026-04-03 17:38:29 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: www.google.com
+2026-04-03 17:38:29 | INFO     | __main__:verify_domain_features:15 | --- 🚀 Analyzing: https://secure-login-update.facebook.account-verification.tk/login ---
+2026-04-03 17:38:29 | INFO     | src.features.domain_features:extract:47 | Extracting domain features for: secure-login-update.facebook.account-verification.tk
+2026-04-03 17:38:29 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: secure-login-update.facebook.account-verification.tk
+2026-04-03 17:38:41 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - timed out
+2026-04-03 17:38:41 | WARNING  | src.external.whois_client:lookup:38 | No WHOIS record found for: secure-login-update.facebook.account-verification.tk
+2026-04-03 17:38:41 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: secure-login-update.facebook.account-verification.tk
+2026-04-03 17:38:59 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: secure-login-update.facebook.account-verification.tk
+2026-04-03 17:38:59 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for secure-login-update.facebook.account-verification.tk: [Errno 11001] getaddrinfo failed
+2026-04-03 17:41:20 | WARNING  | src.external.cache_manager:__init__:26 | Redis Cache unavailable: Error 10061 connecting to localhost:6379. No connection could be made because the target machine actively refused it.. Falling back to no-cache mode.
+2026-04-03 17:41:20 | INFO     | src.features.pipeline:__init__:14 | Initializing Feature Engineering Pipeline...
+2026-04-03 17:41:20 | INFO     | __main__:verify_pipeline:12 | Starting Full Feature Engineering Pipeline verification...
+2026-04-03 17:41:20 | INFO     | __main__:verify_pipeline:15 | --- 🌀 Executing Full Pipeline: https://www.google.com ---
+2026-04-03 17:41:20 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://www.google.com ---
+2026-04-03 17:41:20 | INFO     | src.features.domain_features:extract:47 | Extracting domain features for: www.google.com
+2026-04-03 17:41:20 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: www.google.com
+2026-04-03 17:41:23 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: www.google.com
+2026-04-03 17:41:37 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: www.google.com
+2026-04-03 17:41:37 | INFO     | src.features.content_features:extract:33 | Extracting content features for: https://www.google.com
+2026-04-03 17:41:38 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-03 17:41:38 | SUCCESS  | __main__:verify_pipeline:19 | Total Features Extracted: 50
+2026-04-03 17:41:38 | INFO     | __main__:verify_pipeline:23 | Sample Feature Values:
+2026-04-03 17:41:38 | INFO     | __main__:verify_pipeline:25 |   url_length: 22
+2026-04-03 17:41:38 | INFO     | __main__:verify_pipeline:25 |   domain_length: 14
+2026-04-03 17:41:38 | INFO     | __main__:verify_pipeline:25 |   path_length: 0
+2026-04-03 17:41:38 | INFO     | __main__:verify_pipeline:25 |   num_dots: 2
+2026-04-03 17:41:38 | INFO     | __main__:verify_pipeline:25 |   num_hyphens: 0
+2026-04-03 17:41:38 | INFO     | __main__:verify_pipeline:26 |   ...
+2026-04-03 17:41:38 | INFO     | __main__:verify_pipeline:28 |   num_images: 1
+2026-04-03 17:41:38 | INFO     | __main__:verify_pipeline:28 |   num_forms: 1
+2026-04-03 17:41:38 | INFO     | __main__:verify_pipeline:28 |   form_has_password_field: 0
+2026-04-03 17:41:38 | INFO     | __main__:verify_pipeline:28 |   uses_https: 1
+2026-04-03 17:41:38 | INFO     | __main__:verify_pipeline:28 |   has_mixed_content: 0
+2026-04-03 17:41:38 | INFO     | __main__:verify_pipeline:15 | --- 🌀 Executing Full Pipeline: https://secure-login-facebook.account-verification.tk/login ---
+2026-04-03 17:41:38 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://secure-login-facebook.account-verification.tk/login ---
+2026-04-03 17:41:38 | INFO     | src.features.domain_features:extract:47 | Extracting domain features for: secure-login-facebook.account-verification.tk
+2026-04-03 17:41:38 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: secure-login-facebook.account-verification.tk
+2026-04-03 17:41:50 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - timed out
+2026-04-03 17:41:50 | WARNING  | src.external.whois_client:lookup:38 | No WHOIS record found for: secure-login-facebook.account-verification.tk
+2026-04-03 17:41:50 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: secure-login-facebook.account-verification.tk
+2026-04-03 17:42:08 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: secure-login-facebook.account-verification.tk
+2026-04-03 17:42:08 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for secure-login-facebook.account-verification.tk: [Errno 11001] getaddrinfo failed
+2026-04-03 17:42:08 | INFO     | src.features.content_features:extract:33 | Extracting content features for: https://secure-login-facebook.account-verification.tk/login
+2026-04-03 17:42:08 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://secure-login-facebook.account-verification.tk/login: HTTPSConnectionPool(host='secure-login-facebook.account-verification.tk', port=443): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001E8D0672720>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2026-04-03 17:42:08 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-03 17:42:08 | SUCCESS  | __main__:verify_pipeline:19 | Total Features Extracted: 50
+2026-04-03 17:42:08 | INFO     | __main__:verify_pipeline:23 | Sample Feature Values:
+2026-04-03 17:42:08 | INFO     | __main__:verify_pipeline:25 |   url_length: 59
+2026-04-03 17:42:08 | INFO     | __main__:verify_pipeline:25 |   domain_length: 45
+2026-04-03 17:42:08 | INFO     | __main__:verify_pipeline:25 |   path_length: 6
+2026-04-03 17:42:08 | INFO     | __main__:verify_pipeline:25 |   num_dots: 2
+2026-04-03 17:42:08 | INFO     | __main__:verify_pipeline:25 |   num_hyphens: 3
+2026-04-03 17:42:08 | INFO     | __main__:verify_pipeline:26 |   ...
+2026-04-03 17:42:08 | INFO     | __main__:verify_pipeline:28 |   num_images: -1
+2026-04-03 17:42:08 | INFO     | __main__:verify_pipeline:28 |   num_forms: -1
+2026-04-03 17:42:08 | INFO     | __main__:verify_pipeline:28 |   form_has_password_field: -1
+2026-04-03 17:42:08 | INFO     | __main__:verify_pipeline:28 |   uses_https: -1
+2026-04-03 17:42:08 | INFO     | __main__:verify_pipeline:28 |   has_mixed_content: -1
+2026-04-03 17:44:56 | WARNING  | src.external.cache_manager:__init__:26 | Redis Cache unavailable: Error 10061 connecting to localhost:6379. No connection could be made because the target machine actively refused it.. Falling back to no-cache mode.
+2026-04-03 17:44:57 | INFO     | src.features.pipeline:__init__:14 | Initializing Feature Engineering Pipeline...
+2026-04-03 17:44:57 | INFO     | __main__:test_pipeline_run:21 | 🚀 Starting individual test run for: https://www.google.com
+2026-04-03 17:44:57 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://www.google.com ---
+2026-04-03 17:44:57 | INFO     | src.features.domain_features:extract:47 | Extracting domain features for: www.google.com
+2026-04-03 17:44:57 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: www.google.com
+2026-04-03 17:45:02 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: www.google.com
+2026-04-03 17:45:16 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: www.google.com
+2026-04-03 17:45:16 | INFO     | src.features.content_features:extract:33 | Extracting content features for: https://www.google.com
+2026-04-03 17:45:17 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-03 17:45:17 | INFO     | __main__:test_pipeline_run:21 | 🚀 Starting individual test run for: http://login-update-account.tk
+2026-04-03 17:45:17 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: http://login-update-account.tk ---
+2026-04-03 17:45:17 | INFO     | src.features.domain_features:extract:47 | Extracting domain features for: login-update-account.tk
+2026-04-03 17:45:17 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: login-update-account.tk
+2026-04-03 17:45:28 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - timed out
+2026-04-03 17:45:28 | WARNING  | src.external.whois_client:lookup:38 | No WHOIS record found for: login-update-account.tk
+2026-04-03 17:45:28 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: login-update-account.tk
+2026-04-03 17:45:46 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: login-update-account.tk
+2026-04-03 17:45:46 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for login-update-account.tk: [Errno 11001] getaddrinfo failed
+2026-04-03 17:45:46 | INFO     | src.features.content_features:extract:33 | Extracting content features for: http://login-update-account.tk
+2026-04-03 17:45:46 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for http://login-update-account.tk: HTTPConnectionPool(host='login-update-account.tk', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027ADD0D6630>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2026-04-03 17:45:46 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-03 17:46:34 | WARNING  | src.external.cache_manager:__init__:26 | Redis Cache unavailable: Error 10061 connecting to localhost:6379. No connection could be made because the target machine actively refused it.. Falling back to no-cache mode.
+2026-04-03 17:46:34 | INFO     | src.features.pipeline:__init__:14 | Initializing Feature Engineering Pipeline...
+2026-04-03 17:46:34 | INFO     | __main__:test_pipeline_run:21 | 🚀 Starting individual test run for: https://www.google.com
+2026-04-03 17:46:34 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://www.google.com ---
+2026-04-03 17:46:34 | INFO     | src.features.domain_features:extract:47 | Extracting domain features for: www.google.com
+2026-04-03 17:46:34 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: www.google.com
+2026-04-03 17:46:37 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: www.google.com
+2026-04-03 17:46:51 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: www.google.com
+2026-04-03 17:46:51 | INFO     | src.features.content_features:extract:33 | Extracting content features for: https://www.google.com
+2026-04-03 17:46:52 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-03 17:46:52 | INFO     | __main__:test_pipeline_run:21 | 🚀 Starting individual test run for: http://login-update-account.tk
+2026-04-03 17:46:52 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: http://login-update-account.tk ---
+2026-04-03 17:46:52 | INFO     | src.features.domain_features:extract:47 | Extracting domain features for: login-update-account.tk
+2026-04-03 17:46:52 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: login-update-account.tk
+2026-04-03 17:47:03 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - timed out
+2026-04-03 17:47:03 | WARNING  | src.external.whois_client:lookup:38 | No WHOIS record found for: login-update-account.tk
+2026-04-03 17:47:03 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: login-update-account.tk
+2026-04-03 17:47:20 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: login-update-account.tk
+2026-04-03 17:47:21 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for login-update-account.tk: [Errno 11001] getaddrinfo failed
+2026-04-03 17:47:21 | INFO     | src.features.content_features:extract:33 | Extracting content features for: http://login-update-account.tk
+2026-04-03 17:47:21 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for http://login-update-account.tk: HTTPConnectionPool(host='login-update-account.tk', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DC4CE668D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2026-04-03 17:47:21 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-04 07:18:30 | INFO     | src.graph.builder:__init__:48 | Initialized empty TGIS Graph.
+2026-04-04 07:18:30 | ERROR    | src.graph.builder:add_edge:89 | Invalid edge type: INVALID_EDGE
+2026-04-04 07:18:30 | INFO     | src.graph.builder:__init__:48 | Initialized empty TGIS Graph.
+2026-04-04 07:18:30 | ERROR    | src.graph.builder:add_node:63 | Invalid node type: INVALID_TYPE
+2026-04-04 07:18:30 | INFO     | src.graph.builder:__init__:48 | Initialized empty TGIS Graph.
+2026-04-04 07:18:30 | INFO     | src.graph.builder:save_graph:109 | Trust graph saved to: data/graphs/test_graph.gpickle
+2026-04-04 07:18:30 | INFO     | src.graph.builder:__init__:48 | Initialized empty TGIS Graph.
+2026-04-04 07:18:30 | INFO     | src.graph.builder:load_graph:122 | Trust graph loaded from: data/graphs/test_graph.gpickle (2 nodes, 1 edges)
