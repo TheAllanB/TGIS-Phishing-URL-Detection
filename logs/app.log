@@ -13419,3 +13419,559 @@ Registrars.
 2026-04-05 00:23:53 | INFO     | src.data.preprocessor:load:71 | Preprocessor models loaded from data/models
 2026-04-05 00:23:53 | INFO     | __main__:test_ml_pipeline:60 | Step 4: Running Inference on Sample URL: https://sites.google.com/view/fhnjdngn/home
 2026-04-05 00:23:53 | INFO     | __main__:test_ml_pipeline:78 | Step 5: Printing Model Evaluation Metrics...
+2026-04-05 00:24:49 | WARNING  | src.external.cache_manager:__init__:26 | Redis Cache unavailable: Error 10061 connecting to localhost:6379. No connection could be made because the target machine actively refused it.. Falling back to no-cache mode.
+2026-04-05 00:24:51 | INFO     | logging:callHandlers:1762 | Started server process [14528]
+2026-04-05 00:24:51 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-05 00:24:51 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-05 00:27:11 | INFO     | logging:callHandlers:1762 | 127.0.0.1:55731 - "GET /health HTTP/1.1" 200
+2026-04-05 00:27:18 | INFO     | logging:callHandlers:1762 | 127.0.0.1:55734 - "GET /health HTTP/1.1" 200
+2026-04-05 00:27:18 | INFO     | logging:callHandlers:1762 | 127.0.0.1:55735 - "GET /health HTTP/1.1" 200
+2026-04-05 00:27:20 | INFO     | api.services.prediction_service:__init__:39 | Initializing Prediction Service...
+2026-04-05 00:27:20 | INFO     | src.features.pipeline:__init__:14 | Initializing Feature Engineering Pipeline...
+2026-04-05 00:27:20 | INFO     | src.graph.builder:__init__:48 | Initialized empty TGIS Graph.
+2026-04-05 00:27:20 | INFO     | src.graph.builder:load_graph:122 | Trust graph loaded from: data/graphs/domain_graph.gpickle (74 nodes, 42 edges)
+2026-04-05 00:27:20 | INFO     | src.models.ensemble:__init__:20 | Loading Ensemble Models...
+2026-04-05 00:27:21 | SUCCESS  | src.models.ensemble:__init__:29 | Ensemble Models Loaded Successfully.
+2026-04-05 00:27:21 | INFO     | src.data.preprocessor:load:71 | Preprocessor models loaded from data/models
+2026-04-05 00:27:21 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://www.genrorst-dows.dnset.com/
+2026-04-05 00:27:21 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://www.genrorst-dows.dnset.com/ ---
+2026-04-05 00:27:21 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://www.genrorst-dows.dnset.com/ ---
+2026-04-05 00:27:21 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: www.genrorst-dows.dnset.com
+2026-04-05 00:27:21 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: www.genrorst-dows.dnset.com
+2026-04-05 00:27:22 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: www.genrorst-dows.dnset.com
+2026-04-05 00:27:36 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: www.genrorst-dows.dnset.com
+2026-04-05 00:27:37 | WARNING  | src.external.ssl_checker:check:59 | SSL handshake failed for www.genrorst-dows.dnset.com: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)
+2026-04-05 00:27:37 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://www.genrorst-dows.dnset.com/
+2026-04-05 00:27:38 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://www.genrorst-dows.dnset.com/: HTTPSConnectionPool(host='www.genrorst-dows.dnset.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)')))
+2026-04-05 00:27:38 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:27:38 | WARNING  | src.features.graph_features:extract:41 | Node www.genrorst-dows.dnset.com not found in graph. Returning default graph features.
+2026-04-05 00:27:38 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:27:38 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:27:38 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://www.genrorst-dows.dnset.com/
+2026-04-05 00:27:38 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: www.genrorst-dows.dnset.com
+2026-04-05 00:27:39 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: PHISHING ---
+2026-04-05 00:27:40 | INFO     | logging:callHandlers:1762 | 127.0.0.1:55739 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:27:54 | INFO     | logging:callHandlers:1762 | 127.0.0.1:55752 - "GET /health HTTP/1.1" 200
+2026-04-05 00:27:54 | INFO     | logging:callHandlers:1762 | 127.0.0.1:55753 - "GET /health HTTP/1.1" 200
+2026-04-05 00:27:56 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://kq0hgp.webwave.dev/
+2026-04-05 00:27:56 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://kq0hgp.webwave.dev/ ---
+2026-04-05 00:27:56 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://kq0hgp.webwave.dev/ ---
+2026-04-05 00:27:56 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: kq0hgp.webwave.dev
+2026-04-05 00:27:56 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: kq0hgp.webwave.dev
+2026-04-05 00:27:56 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - [Errno 11001] getaddrinfo failed
+2026-04-05 00:27:56 | WARNING  | src.external.whois_client:lookup:38 | No WHOIS record found for: kq0hgp.webwave.dev
+2026-04-05 00:27:56 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: kq0hgp.webwave.dev
+2026-04-05 00:28:10 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: kq0hgp.webwave.dev
+2026-04-05 00:28:11 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://kq0hgp.webwave.dev/
+2026-04-05 00:28:13 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:28:13 | WARNING  | src.features.graph_features:extract:41 | Node kq0hgp.webwave.dev not found in graph. Returning default graph features.
+2026-04-05 00:28:13 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:28:13 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:28:13 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://kq0hgp.webwave.dev/
+2026-04-05 00:28:13 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: kq0hgp.webwave.dev
+2026-04-05 00:28:13 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - [Errno 11001] getaddrinfo failed
+2026-04-05 00:28:13 | WARNING  | src.external.whois_client:lookup:38 | No WHOIS record found for: kq0hgp.webwave.dev
+2026-04-05 00:28:13 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: SAFE ---
+2026-04-05 00:28:13 | INFO     | logging:callHandlers:1762 | 127.0.0.1:55755 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:28:20 | INFO     | logging:callHandlers:1762 | 127.0.0.1:52355 - "GET /health HTTP/1.1" 200
+2026-04-05 00:28:20 | INFO     | logging:callHandlers:1762 | 127.0.0.1:52356 - "GET /health HTTP/1.1" 200
+2026-04-05 00:28:22 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://claude.ai/chat/72678119-1a87-4fc2-9a5b-792396b2057a
+2026-04-05 00:28:22 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://claude.ai/chat/72678119-1a87-4fc2-9a5b-792396b2057a ---
+2026-04-05 00:28:22 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://claude.ai/chat/72678119-1a87-4fc2-9a5b-792396b2057a ---
+2026-04-05 00:28:22 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: claude.ai
+2026-04-05 00:28:22 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: claude.ai
+2026-04-05 00:28:24 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: claude.ai
+2026-04-05 00:28:38 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: claude.ai
+2026-04-05 00:28:38 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://claude.ai/chat/72678119-1a87-4fc2-9a5b-792396b2057a
+2026-04-05 00:28:38 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:28:38 | WARNING  | src.features.graph_features:extract:41 | Node claude.ai not found in graph. Returning default graph features.
+2026-04-05 00:28:38 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:28:38 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:28:39 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://claude.ai/chat/72678119-1a87-4fc2-9a5b-792396b2057a
+2026-04-05 00:28:39 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: claude.ai
+2026-04-05 00:28:40 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: SAFE ---
+2026-04-05 00:28:40 | INFO     | logging:callHandlers:1762 | 127.0.0.1:52359 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:28:47 | INFO     | logging:callHandlers:1762 | 127.0.0.1:55200 - "GET /health HTTP/1.1" 200
+2026-04-05 00:28:47 | INFO     | logging:callHandlers:1762 | 127.0.0.1:55201 - "GET /health HTTP/1.1" 200
+2026-04-05 00:28:50 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://www.lvsayador-dio.yourtrap.com/
+2026-04-05 00:28:50 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://www.lvsayador-dio.yourtrap.com/ ---
+2026-04-05 00:28:50 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://www.lvsayador-dio.yourtrap.com/ ---
+2026-04-05 00:28:50 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: www.lvsayador-dio.yourtrap.com
+2026-04-05 00:28:50 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: www.lvsayador-dio.yourtrap.com
+2026-04-05 00:28:51 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: www.lvsayador-dio.yourtrap.com
+2026-04-05 00:29:05 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: www.lvsayador-dio.yourtrap.com
+2026-04-05 00:29:06 | WARNING  | src.external.ssl_checker:check:59 | SSL handshake failed for www.lvsayador-dio.yourtrap.com: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)
+2026-04-05 00:29:06 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://www.lvsayador-dio.yourtrap.com/
+2026-04-05 00:29:07 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://www.lvsayador-dio.yourtrap.com/: HTTPSConnectionPool(host='www.lvsayador-dio.yourtrap.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)')))
+2026-04-05 00:29:07 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:29:07 | WARNING  | src.features.graph_features:extract:41 | Node www.lvsayador-dio.yourtrap.com not found in graph. Returning default graph features.
+2026-04-05 00:29:07 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:29:07 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:29:07 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://www.lvsayador-dio.yourtrap.com/
+2026-04-05 00:29:07 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: www.lvsayador-dio.yourtrap.com
+2026-04-05 00:29:09 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: PHISHING ---
+2026-04-05 00:29:09 | INFO     | logging:callHandlers:1762 | 127.0.0.1:59409 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:29:42 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56177 - "GET /health HTTP/1.1" 200
+2026-04-05 00:29:51 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56179 - "GET /health HTTP/1.1" 200
+2026-04-05 00:29:53 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://console.cloud.google.com/apis/credentials?project=tgis-phishing-url-detection
+2026-04-05 00:29:53 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://console.cloud.google.com/apis/credentials?project=tgis-phishing-url-detection ---
+2026-04-05 00:29:53 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://console.cloud.google.com/apis/credentials?project=tgis-phishing-url-detection ---
+2026-04-05 00:29:53 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: console.cloud.google.com
+2026-04-05 00:29:53 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: console.cloud.google.com
+2026-04-05 00:29:55 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: console.cloud.google.com
+2026-04-05 00:30:09 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: console.cloud.google.com
+2026-04-05 00:30:09 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://console.cloud.google.com/apis/credentials?project=tgis-phishing-url-detection
+2026-04-05 00:30:11 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:30:11 | WARNING  | src.features.graph_features:extract:41 | Node console.cloud.google.com not found in graph. Returning default graph features.
+2026-04-05 00:30:11 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:30:11 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:30:11 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://console.cloud.google.com/apis/credentials?project=tgis-phishing-url-detection
+2026-04-05 00:30:11 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: console.cloud.google.com
+2026-04-05 00:30:13 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: SAFE ---
+2026-04-05 00:30:13 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56181 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:32:19 | INFO     | logging:callHandlers:1762 | 127.0.0.1:61334 - "GET /health HTTP/1.1" 200
+2026-04-05 00:32:19 | INFO     | logging:callHandlers:1762 | 127.0.0.1:61335 - "GET /health HTTP/1.1" 200
+2026-04-05 00:32:21 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://data.mendeley.com/datasets/vfszbj9b36/1/files/f0de314f-ea72-4385-9faa-f06593bb0a2d
+2026-04-05 00:32:21 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://data.mendeley.com/datasets/vfszbj9b36/1/files/f0de314f-ea72-4385-9faa-f06593bb0a2d ---
+2026-04-05 00:32:21 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://data.mendeley.com/datasets/vfszbj9b36/1/files/f0de314f-ea72-4385-9faa-f06593bb0a2d ---
+2026-04-05 00:32:21 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: data.mendeley.com
+2026-04-05 00:32:21 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: data.mendeley.com
+2026-04-05 00:32:23 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: data.mendeley.com
+2026-04-05 00:32:37 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: data.mendeley.com
+2026-04-05 00:32:38 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://data.mendeley.com/datasets/vfszbj9b36/1/files/f0de314f-ea72-4385-9faa-f06593bb0a2d
+2026-04-05 00:32:39 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://data.mendeley.com/datasets/vfszbj9b36/1/files/f0de314f-ea72-4385-9faa-f06593bb0a2d: 'NoneType' object has no attribute 'lower'
+2026-04-05 00:32:39 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:32:39 | WARNING  | src.features.graph_features:extract:41 | Node data.mendeley.com not found in graph. Returning default graph features.
+2026-04-05 00:32:39 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:32:39 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:32:39 | INFO     | logging:callHandlers:1762 | 127.0.0.1:61346 - "GET /health HTTP/1.1" 200
+2026-04-05 00:32:39 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://data.mendeley.com/datasets/vfszbj9b36/1/files/f0de314f-ea72-4385-9faa-f06593bb0a2d
+2026-04-05 00:32:39 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: data.mendeley.com
+2026-04-05 00:32:41 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: SAFE ---
+2026-04-05 00:32:41 | INFO     | logging:callHandlers:1762 | 127.0.0.1:61339 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:32:44 | INFO     | logging:callHandlers:1762 | 127.0.0.1:61351 - "GET /health HTTP/1.1" 200
+2026-04-05 00:32:46 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://mainchainfxx.pages.dev/check/dapp/
+2026-04-05 00:32:46 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://mainchainfxx.pages.dev/check/dapp/ ---
+2026-04-05 00:32:46 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://mainchainfxx.pages.dev/check/dapp/ ---
+2026-04-05 00:32:46 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: mainchainfxx.pages.dev
+2026-04-05 00:32:46 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: mainchainfxx.pages.dev
+2026-04-05 00:32:46 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - [Errno 11001] getaddrinfo failed
+2026-04-05 00:32:46 | WARNING  | src.external.whois_client:lookup:38 | No WHOIS record found for: mainchainfxx.pages.dev
+2026-04-05 00:32:46 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: mainchainfxx.pages.dev
+2026-04-05 00:32:49 | INFO     | logging:callHandlers:1762 | 127.0.0.1:61355 - "GET /health HTTP/1.1" 200
+2026-04-05 00:32:51 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://mainchainfxx.pages.dev/check/dapp/
+2026-04-05 00:32:51 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://mainchainfxx.pages.dev/check/dapp/ ---
+2026-04-05 00:32:51 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://mainchainfxx.pages.dev/check/dapp/ ---
+2026-04-05 00:32:51 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: mainchainfxx.pages.dev
+2026-04-05 00:32:51 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: mainchainfxx.pages.dev
+2026-04-05 00:32:51 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - [Errno 11001] getaddrinfo failed
+2026-04-05 00:32:51 | WARNING  | src.external.whois_client:lookup:38 | No WHOIS record found for: mainchainfxx.pages.dev
+2026-04-05 00:32:51 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: mainchainfxx.pages.dev
+2026-04-05 00:33:00 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: mainchainfxx.pages.dev
+2026-04-05 00:33:01 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for mainchainfxx.pages.dev: [Errno 11002] getaddrinfo failed
+2026-04-05 00:33:01 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://mainchainfxx.pages.dev/check/dapp/
+2026-04-05 00:33:01 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://mainchainfxx.pages.dev/check/dapp/: HTTPSConnectionPool(host='mainchainfxx.pages.dev', port=443): Max retries exceeded with url: /check/dapp/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001E6A81CAC90>: Failed to establish a new connection: [Errno 11002] getaddrinfo failed'))
+2026-04-05 00:33:01 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:33:01 | WARNING  | src.features.graph_features:extract:41 | Node mainchainfxx.pages.dev not found in graph. Returning default graph features.
+2026-04-05 00:33:01 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:33:01 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:33:01 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://mainchainfxx.pages.dev/check/dapp/
+2026-04-05 00:33:01 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: mainchainfxx.pages.dev
+2026-04-05 00:33:01 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - [Errno 11001] getaddrinfo failed
+2026-04-05 00:33:01 | WARNING  | src.external.whois_client:lookup:38 | No WHOIS record found for: mainchainfxx.pages.dev
+2026-04-05 00:33:01 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: PHISHING ---
+2026-04-05 00:33:01 | INFO     | logging:callHandlers:1762 | 127.0.0.1:61353 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:33:05 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: mainchainfxx.pages.dev
+2026-04-05 00:33:05 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for mainchainfxx.pages.dev: [Errno 11002] getaddrinfo failed
+2026-04-05 00:33:05 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://mainchainfxx.pages.dev/check/dapp/
+2026-04-05 00:33:05 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://mainchainfxx.pages.dev/check/dapp/: HTTPSConnectionPool(host='mainchainfxx.pages.dev', port=443): Max retries exceeded with url: /check/dapp/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001E6A81C9BB0>: Failed to establish a new connection: [Errno 11002] getaddrinfo failed'))
+2026-04-05 00:33:05 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:33:05 | WARNING  | src.features.graph_features:extract:41 | Node mainchainfxx.pages.dev not found in graph. Returning default graph features.
+2026-04-05 00:33:05 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:33:05 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:33:05 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://mainchainfxx.pages.dev/check/dapp/
+2026-04-05 00:33:05 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: mainchainfxx.pages.dev
+2026-04-05 00:33:05 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - [Errno 11001] getaddrinfo failed
+2026-04-05 00:33:05 | WARNING  | src.external.whois_client:lookup:38 | No WHOIS record found for: mainchainfxx.pages.dev
+2026-04-05 00:33:05 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: PHISHING ---
+2026-04-05 00:33:05 | INFO     | logging:callHandlers:1762 | 127.0.0.1:58456 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:33:12 | INFO     | logging:callHandlers:1762 | 127.0.0.1:58461 - "GET /health HTTP/1.1" 200
+2026-04-05 00:33:12 | INFO     | logging:callHandlers:1762 | 127.0.0.1:58462 - "GET /health HTTP/1.1" 200
+2026-04-05 00:33:14 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://anoe.co.jp.dginmhw.cn/aeon
+2026-04-05 00:33:14 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://anoe.co.jp.dginmhw.cn/aeon ---
+2026-04-05 00:33:14 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://anoe.co.jp.dginmhw.cn/aeon ---
+2026-04-05 00:33:14 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: anoe.co.jp.dginmhw.cn
+2026-04-05 00:33:14 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: anoe.co.jp.dginmhw.cn
+2026-04-05 00:33:15 | ERROR    | src.external.whois_client:lookup:50 | WHOIS lookup failed for anoe.co.jp.dginmhw.cn: No matching record.
+
+2026-04-05 00:33:15 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: anoe.co.jp.dginmhw.cn
+2026-04-05 00:33:29 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: anoe.co.jp.dginmhw.cn
+2026-04-05 00:33:30 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for anoe.co.jp.dginmhw.cn: [Errno 11001] getaddrinfo failed
+2026-04-05 00:33:30 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://anoe.co.jp.dginmhw.cn/aeon
+2026-04-05 00:33:30 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://anoe.co.jp.dginmhw.cn/aeon: HTTPSConnectionPool(host='anoe.co.jp.dginmhw.cn', port=443): Max retries exceeded with url: /aeon (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001E6A8225BE0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2026-04-05 00:33:30 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:33:30 | WARNING  | src.features.graph_features:extract:41 | Node anoe.co.jp.dginmhw.cn not found in graph. Returning default graph features.
+2026-04-05 00:33:30 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:33:30 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:33:30 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://anoe.co.jp.dginmhw.cn/aeon
+2026-04-05 00:33:30 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: anoe.co.jp.dginmhw.cn
+2026-04-05 00:33:31 | ERROR    | src.external.whois_client:lookup:50 | WHOIS lookup failed for anoe.co.jp.dginmhw.cn: No matching record.
+
+2026-04-05 00:33:31 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: PHISHING ---
+2026-04-05 00:33:31 | INFO     | logging:callHandlers:1762 | 127.0.0.1:58464 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:33:44 | INFO     | logging:callHandlers:1762 | 127.0.0.1:62609 - "GET /health HTTP/1.1" 200
+2026-04-05 00:33:44 | INFO     | logging:callHandlers:1762 | 127.0.0.1:62610 - "GET /health HTTP/1.1" 200
+2026-04-05 00:33:46 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://g00gle.com
+2026-04-05 00:33:46 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://g00gle.com ---
+2026-04-05 00:33:46 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://g00gle.com ---
+2026-04-05 00:33:46 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: g00gle.com
+2026-04-05 00:33:46 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: g00gle.com
+2026-04-05 00:33:48 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: g00gle.com
+2026-04-05 00:34:02 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: g00gle.com
+2026-04-05 00:34:02 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for g00gle.com: [Errno 11001] getaddrinfo failed
+2026-04-05 00:34:02 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://g00gle.com
+2026-04-05 00:34:02 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://g00gle.com: HTTPSConnectionPool(host='g00gle.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001E6A826F290>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2026-04-05 00:34:02 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:34:02 | WARNING  | src.features.graph_features:extract:41 | Node g00gle.com not found in graph. Returning default graph features.
+2026-04-05 00:34:02 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:34:02 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:34:02 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://g00gle.com
+2026-04-05 00:34:02 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: g00gle.com
+2026-04-05 00:34:04 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: PHISHING ---
+2026-04-05 00:34:04 | INFO     | logging:callHandlers:1762 | 127.0.0.1:62612 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:34:21 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63533 - "GET /health HTTP/1.1" 200
+2026-04-05 00:34:22 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63534 - "GET /health HTTP/1.1" 200
+2026-04-05 00:34:24 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://google.com
+2026-04-05 00:34:24 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://google.com ---
+2026-04-05 00:34:24 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://google.com ---
+2026-04-05 00:34:24 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: google.com
+2026-04-05 00:34:24 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: google.com
+2026-04-05 00:34:25 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: google.com
+2026-04-05 00:34:39 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: google.com
+2026-04-05 00:34:39 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://google.com
+2026-04-05 00:34:41 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:34:41 | WARNING  | src.features.graph_features:extract:41 | Node google.com not found in graph. Returning default graph features.
+2026-04-05 00:34:41 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:34:41 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:34:41 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://google.com
+2026-04-05 00:34:41 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: google.com
+2026-04-05 00:34:43 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: SAFE ---
+2026-04-05 00:34:43 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63536 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:35:01 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63371 - "GET /health HTTP/1.1" 200
+2026-04-05 00:35:01 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63372 - "GET /health HTTP/1.1" 200
+2026-04-05 00:35:03 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://ama30n.com
+2026-04-05 00:35:03 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://ama30n.com ---
+2026-04-05 00:35:03 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://ama30n.com ---
+2026-04-05 00:35:03 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: ama30n.com
+2026-04-05 00:35:03 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: ama30n.com
+2026-04-05 00:35:04 | ERROR    | src.external.whois_client:lookup:50 | WHOIS lookup failed for ama30n.com: No match for "AMA30N.COM".
+>>> Last update of whois database: 2026-04-04T19:04:58Z <<<
+
+NOTICE: The expiration date displayed in this record is the date the
+registrar's sponsorship of the domain name registration in the registry is
+currently set to expire. This date does not necessarily reflect the expiration
+date of the domain name registrant's agreement with the sponsoring
+registrar.  Users may consult the sponsoring registrar's Whois database to
+view the registrar's reported date of expiration for this registration.
+
+TERMS OF USE: You are not authorized to access or query our Whois
+database through the use of electronic processes that are high-volume and
+automated except as reasonably necessary to register domain names or
+modify existing registrations; the Data in VeriSign Global Registry
+Services' ("VeriSign") Whois database is provided by VeriSign for
+information purposes only, and to assist persons in obtaining information
+about or related to a domain name registration record. VeriSign does not
+guarantee its accuracy. By submitting a Whois query, you agree to abide
+by the following terms of use: You agree that you may use this Data only
+for lawful purposes and that under no circumstances will you use this Data
+to: (1) allow, enable, or otherwise support the transmission of mass
+unsolicited, commercial advertising or solicitations via e-mail, telephone,
+or facsimile; or (2) enable high volume, automated, electronic processes
+that apply to VeriSign (or its computer systems). The compilation,
+repackaging, dissemination or other use of this Data is expressly
+prohibited without the prior written consent of VeriSign. You agree not to
+use electronic processes that are automated and high-volume to access or
+query the Whois database except as reasonably necessary to register
+domain names or modify existing registrations. VeriSign reserves the right
+to restrict your access to the Whois database in its sole discretion to ensure
+operational stability.  VeriSign may restrict or terminate your access to the
+Whois database for failure to abide by these terms of use. VeriSign
+reserves the right to modify these terms at any time.
+
+The Registry database contains ONLY .COM, .NET, .EDU domains and
+Registrars.
+
+2026-04-05 00:35:04 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: ama30n.com
+2026-04-05 00:35:18 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: ama30n.com
+2026-04-05 00:35:19 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for ama30n.com: [Errno 11001] getaddrinfo failed
+2026-04-05 00:35:19 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://ama30n.com
+2026-04-05 00:35:19 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://ama30n.com: HTTPSConnectionPool(host='ama30n.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001E6A8225340>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2026-04-05 00:35:19 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:35:19 | WARNING  | src.features.graph_features:extract:41 | Node ama30n.com not found in graph. Returning default graph features.
+2026-04-05 00:35:19 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:35:19 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:35:19 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://ama30n.com
+2026-04-05 00:35:19 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: ama30n.com
+2026-04-05 00:35:20 | ERROR    | src.external.whois_client:lookup:50 | WHOIS lookup failed for ama30n.com: No match for "AMA30N.COM".
+>>> Last update of whois database: 2026-04-04T19:05:12Z <<<
+
+NOTICE: The expiration date displayed in this record is the date the
+registrar's sponsorship of the domain name registration in the registry is
+currently set to expire. This date does not necessarily reflect the expiration
+date of the domain name registrant's agreement with the sponsoring
+registrar.  Users may consult the sponsoring registrar's Whois database to
+view the registrar's reported date of expiration for this registration.
+
+TERMS OF USE: You are not authorized to access or query our Whois
+database through the use of electronic processes that are high-volume and
+automated except as reasonably necessary to register domain names or
+modify existing registrations; the Data in VeriSign Global Registry
+Services' ("VeriSign") Whois database is provided by VeriSign for
+information purposes only, and to assist persons in obtaining information
+about or related to a domain name registration record. VeriSign does not
+guarantee its accuracy. By submitting a Whois query, you agree to abide
+by the following terms of use: You agree that you may use this Data only
+for lawful purposes and that under no circumstances will you use this Data
+to: (1) allow, enable, or otherwise support the transmission of mass
+unsolicited, commercial advertising or solicitations via e-mail, telephone,
+or facsimile; or (2) enable high volume, automated, electronic processes
+that apply to VeriSign (or its computer systems). The compilation,
+repackaging, dissemination or other use of this Data is expressly
+prohibited without the prior written consent of VeriSign. You agree not to
+use electronic processes that are automated and high-volume to access or
+query the Whois database except as reasonably necessary to register
+domain names or modify existing registrations. VeriSign reserves the right
+to restrict your access to the Whois database in its sole discretion to ensure
+operational stability.  VeriSign may restrict or terminate your access to the
+Whois database for failure to abide by these terms of use. VeriSign
+reserves the right to modify these terms at any time.
+
+The Registry database contains ONLY .COM, .NET, .EDU domains and
+Registrars.
+
+2026-04-05 00:35:20 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: PHISHING ---
+2026-04-05 00:35:20 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63374 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:35:34 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63383 - "GET /health HTTP/1.1" 200
+2026-04-05 00:35:39 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63386 - "GET /health HTTP/1.1" 200
+2026-04-05 00:35:39 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63387 - "GET /health HTTP/1.1" 200
+2026-04-05 00:35:41 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://havenpost.pages.dev
+2026-04-05 00:35:41 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://havenpost.pages.dev ---
+2026-04-05 00:35:41 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://havenpost.pages.dev ---
+2026-04-05 00:35:41 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: havenpost.pages.dev
+2026-04-05 00:35:41 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: havenpost.pages.dev
+2026-04-05 00:35:41 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - [Errno 11001] getaddrinfo failed
+2026-04-05 00:35:41 | WARNING  | src.external.whois_client:lookup:38 | No WHOIS record found for: havenpost.pages.dev
+2026-04-05 00:35:41 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: havenpost.pages.dev
+2026-04-05 00:35:55 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: havenpost.pages.dev
+2026-04-05 00:35:55 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://havenpost.pages.dev
+2026-04-05 00:35:56 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:35:56 | WARNING  | src.features.graph_features:extract:41 | Node havenpost.pages.dev not found in graph. Returning default graph features.
+2026-04-05 00:35:56 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:35:56 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:35:56 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://havenpost.pages.dev
+2026-04-05 00:35:56 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: havenpost.pages.dev
+2026-04-05 00:35:56 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - [Errno 11001] getaddrinfo failed
+2026-04-05 00:35:56 | WARNING  | src.external.whois_client:lookup:38 | No WHOIS record found for: havenpost.pages.dev
+2026-04-05 00:35:56 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: SAFE ---
+2026-04-05 00:35:56 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63389 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:36:26 | INFO     | logging:callHandlers:1762 | 127.0.0.1:58220 - "GET /health HTTP/1.1" 200
+2026-04-05 00:36:26 | INFO     | logging:callHandlers:1762 | 127.0.0.1:58221 - "GET /health HTTP/1.1" 200
+2026-04-05 00:36:28 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for http://jxz.ref.mybluehost.me/post/bezness/index.php
+2026-04-05 00:36:28 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: http://jxz.ref.mybluehost.me/post/bezness/index.php ---
+2026-04-05 00:36:28 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: http://jxz.ref.mybluehost.me/post/bezness/index.php ---
+2026-04-05 00:36:28 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: jxz.ref.mybluehost.me
+2026-04-05 00:36:28 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: jxz.ref.mybluehost.me
+2026-04-05 00:36:30 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: jxz.ref.mybluehost.me
+2026-04-05 00:36:44 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: jxz.ref.mybluehost.me
+2026-04-05 00:36:44 | WARNING  | src.external.ssl_checker:check:59 | SSL handshake failed for jxz.ref.mybluehost.me: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'jxz.ref.mybluehost.me'. (_ssl.c:1000)
+2026-04-05 00:36:44 | INFO     | src.features.content_features:extract:34 | Extracting content features for: http://jxz.ref.mybluehost.me/post/bezness/index.php
+2026-04-05 00:36:45 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:36:45 | WARNING  | src.features.graph_features:extract:41 | Node jxz.ref.mybluehost.me not found in graph. Returning default graph features.
+2026-04-05 00:36:45 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:36:45 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:36:45 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: http://jxz.ref.mybluehost.me/post/bezness/index.php
+2026-04-05 00:36:45 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: jxz.ref.mybluehost.me
+2026-04-05 00:36:47 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: PHISHING ---
+2026-04-05 00:36:47 | INFO     | logging:callHandlers:1762 | 127.0.0.1:58223 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:37:00 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56705 - "GET /health HTTP/1.1" 200
+2026-04-05 00:37:00 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56706 - "GET /health HTTP/1.1" 200
+2026-04-05 00:37:02 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for http://hjg7grl9hc3.vyiz.my.id
+2026-04-05 00:37:02 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: http://hjg7grl9hc3.vyiz.my.id ---
+2026-04-05 00:37:02 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: http://hjg7grl9hc3.vyiz.my.id ---
+2026-04-05 00:37:02 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: hjg7grl9hc3.vyiz.my.id
+2026-04-05 00:37:02 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: hjg7grl9hc3.vyiz.my.id
+2026-04-05 00:37:02 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - [Errno 11002] getaddrinfo failed
+2026-04-05 00:37:02 | WARNING  | src.external.whois_client:lookup:38 | No WHOIS record found for: hjg7grl9hc3.vyiz.my.id
+2026-04-05 00:37:02 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: hjg7grl9hc3.vyiz.my.id
+2026-04-05 00:37:16 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: hjg7grl9hc3.vyiz.my.id
+2026-04-05 00:37:16 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for hjg7grl9hc3.vyiz.my.id: [Errno 11001] getaddrinfo failed
+2026-04-05 00:37:16 | INFO     | src.features.content_features:extract:34 | Extracting content features for: http://hjg7grl9hc3.vyiz.my.id
+2026-04-05 00:37:16 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for http://hjg7grl9hc3.vyiz.my.id: HTTPConnectionPool(host='hjg7grl9hc3.vyiz.my.id', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6AFAFE720>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2026-04-05 00:37:16 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:37:16 | WARNING  | src.features.graph_features:extract:41 | Node hjg7grl9hc3.vyiz.my.id not found in graph. Returning default graph features.
+2026-04-05 00:37:16 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:37:16 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:37:16 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: http://hjg7grl9hc3.vyiz.my.id
+2026-04-05 00:37:16 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: hjg7grl9hc3.vyiz.my.id
+2026-04-05 00:37:23 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - [Errno 11002] getaddrinfo failed
+2026-04-05 00:37:23 | WARNING  | src.external.whois_client:lookup:38 | No WHOIS record found for: hjg7grl9hc3.vyiz.my.id
+2026-04-05 00:37:23 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: PHISHING ---
+2026-04-05 00:37:23 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56708 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:37:48 | INFO     | logging:callHandlers:1762 | 127.0.0.1:59185 - "GET /health HTTP/1.1" 200
+2026-04-05 00:37:48 | INFO     | logging:callHandlers:1762 | 127.0.0.1:59186 - "GET /health HTTP/1.1" 200
+2026-04-05 00:37:50 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://gropwaspisr8kfd.23bsky.my.id/vhsfhqpdhdsih6/
+2026-04-05 00:37:50 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://gropwaspisr8kfd.23bsky.my.id/vhsfhqpdhdsih6/ ---
+2026-04-05 00:37:50 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://gropwaspisr8kfd.23bsky.my.id/vhsfhqpdhdsih6/ ---
+2026-04-05 00:37:50 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: gropwaspisr8kfd.23bsky.my.id
+2026-04-05 00:37:50 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: gropwaspisr8kfd.23bsky.my.id
+2026-04-05 00:37:50 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - [Errno 11002] getaddrinfo failed
+2026-04-05 00:37:50 | WARNING  | src.external.whois_client:lookup:38 | No WHOIS record found for: gropwaspisr8kfd.23bsky.my.id
+2026-04-05 00:37:50 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: gropwaspisr8kfd.23bsky.my.id
+2026-04-05 00:38:04 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: gropwaspisr8kfd.23bsky.my.id
+2026-04-05 00:38:04 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for gropwaspisr8kfd.23bsky.my.id: [Errno 11001] getaddrinfo failed
+2026-04-05 00:38:04 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://gropwaspisr8kfd.23bsky.my.id/vhsfhqpdhdsih6/
+2026-04-05 00:38:04 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://gropwaspisr8kfd.23bsky.my.id/vhsfhqpdhdsih6/: HTTPSConnectionPool(host='gropwaspisr8kfd.23bsky.my.id', port=443): Max retries exceeded with url: /vhsfhqpdhdsih6/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001E6AFAFF920>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2026-04-05 00:38:04 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:38:04 | WARNING  | src.features.graph_features:extract:41 | Node gropwaspisr8kfd.23bsky.my.id not found in graph. Returning default graph features.
+2026-04-05 00:38:04 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:38:04 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:38:04 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://gropwaspisr8kfd.23bsky.my.id/vhsfhqpdhdsih6/
+2026-04-05 00:38:04 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: gropwaspisr8kfd.23bsky.my.id
+2026-04-05 00:38:04 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - [Errno 11002] getaddrinfo failed
+2026-04-05 00:38:04 | WARNING  | src.external.whois_client:lookup:38 | No WHOIS record found for: gropwaspisr8kfd.23bsky.my.id
+2026-04-05 00:38:04 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: PHISHING ---
+2026-04-05 00:38:04 | INFO     | logging:callHandlers:1762 | 127.0.0.1:59188 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:38:28 | INFO     | logging:callHandlers:1762 | 127.0.0.1:62767 - "GET /health HTTP/1.1" 200
+2026-04-05 00:38:28 | INFO     | logging:callHandlers:1762 | 127.0.0.1:62768 - "GET /health HTTP/1.1" 200
+2026-04-05 00:38:30 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://www.google.com/search?q=is+spring+boot+mvc+architecture&client=opera-gx&hs=TA6&sca_esv=1307bad56e34d33e&sxsrf=ANbL-n7_lO-L7k9Ek8S1cryD5-WblJZYJQ%3A1775309768051&ei=yBPRaa7cAryXseMP4abdwQU&biw=1494&bih=707&oq=is+spring+boot+mvc+a&gs_lp=Egxnd3Mtd2l6LXNlcnAiFGlzIHNwcmluZyBib290IG12YyBhKgIIADILEAAYgAQYkQIYigUyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB5Irw9QgQFYjgRwAHgCkAEAmAGTAaABjQKqAQMwLjK4AQPIAQD4AQGYAgOgAp8CwgIEEAAYR5gDAOIDBRIBMSBAiAYBkAYIkgcDMS4yoAeoDbIHAzAuMrgHmQLCBwMyLTPIBw2ACAA&sclient=gws-wiz-serp
+2026-04-05 00:38:30 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://www.google.com/search?q=is+spring+boot+mvc+architecture&client=opera-gx&hs=TA6&sca_esv=1307bad56e34d33e&sxsrf=ANbL-n7_lO-L7k9Ek8S1cryD5-WblJZYJQ%3A1775309768051&ei=yBPRaa7cAryXseMP4abdwQU&biw=1494&bih=707&oq=is+spring+boot+mvc+a&gs_lp=Egxnd3Mtd2l6LXNlcnAiFGlzIHNwcmluZyBib290IG12YyBhKgIIADILEAAYgAQYkQIYigUyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB5Irw9QgQFYjgRwAHgCkAEAmAGTAaABjQKqAQMwLjK4AQPIAQD4AQGYAgOgAp8CwgIEEAAYR5gDAOIDBRIBMSBAiAYBkAYIkgcDMS4yoAeoDbIHAzAuMrgHmQLCBwMyLTPIBw2ACAA&sclient=gws-wiz-serp ---
+2026-04-05 00:38:30 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://www.google.com/search?q=is+spring+boot+mvc+architecture&client=opera-gx&hs=TA6&sca_esv=1307bad56e34d33e&sxsrf=ANbL-n7_lO-L7k9Ek8S1cryD5-WblJZYJQ%3A1775309768051&ei=yBPRaa7cAryXseMP4abdwQU&biw=1494&bih=707&oq=is+spring+boot+mvc+a&gs_lp=Egxnd3Mtd2l6LXNlcnAiFGlzIHNwcmluZyBib290IG12YyBhKgIIADILEAAYgAQYkQIYigUyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB5Irw9QgQFYjgRwAHgCkAEAmAGTAaABjQKqAQMwLjK4AQPIAQD4AQGYAgOgAp8CwgIEEAAYR5gDAOIDBRIBMSBAiAYBkAYIkgcDMS4yoAeoDbIHAzAuMrgHmQLCBwMyLTPIBw2ACAA&sclient=gws-wiz-serp ---
+2026-04-05 00:38:30 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: www.google.com
+2026-04-05 00:38:30 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: www.google.com
+2026-04-05 00:38:31 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: www.google.com
+2026-04-05 00:38:45 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: www.google.com
+2026-04-05 00:38:46 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://www.google.com/search?q=is+spring+boot+mvc+architecture&client=opera-gx&hs=TA6&sca_esv=1307bad56e34d33e&sxsrf=ANbL-n7_lO-L7k9Ek8S1cryD5-WblJZYJQ%3A1775309768051&ei=yBPRaa7cAryXseMP4abdwQU&biw=1494&bih=707&oq=is+spring+boot+mvc+a&gs_lp=Egxnd3Mtd2l6LXNlcnAiFGlzIHNwcmluZyBib290IG12YyBhKgIIADILEAAYgAQYkQIYigUyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB5Irw9QgQFYjgRwAHgCkAEAmAGTAaABjQKqAQMwLjK4AQPIAQD4AQGYAgOgAp8CwgIEEAAYR5gDAOIDBRIBMSBAiAYBkAYIkgcDMS4yoAeoDbIHAzAuMrgHmQLCBwMyLTPIBw2ACAA&sclient=gws-wiz-serp
+2026-04-05 00:38:47 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:38:47 | WARNING  | src.features.graph_features:extract:41 | Node www.google.com not found in graph. Returning default graph features.
+2026-04-05 00:38:47 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:38:47 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:38:47 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://www.google.com/search?q=is+spring+boot+mvc+architecture&client=opera-gx&hs=TA6&sca_esv=1307bad56e34d33e&sxsrf=ANbL-n7_lO-L7k9Ek8S1cryD5-WblJZYJQ%3A1775309768051&ei=yBPRaa7cAryXseMP4abdwQU&biw=1494&bih=707&oq=is+spring+boot+mvc+a&gs_lp=Egxnd3Mtd2l6LXNlcnAiFGlzIHNwcmluZyBib290IG12YyBhKgIIADILEAAYgAQYkQIYigUyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB5Irw9QgQFYjgRwAHgCkAEAmAGTAaABjQKqAQMwLjK4AQPIAQD4AQGYAgOgAp8CwgIEEAAYR5gDAOIDBRIBMSBAiAYBkAYIkgcDMS4yoAeoDbIHAzAuMrgHmQLCBwMyLTPIBw2ACAA&sclient=gws-wiz-serp
+2026-04-05 00:38:47 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: www.google.com
+2026-04-05 00:38:48 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: SAFE ---
+2026-04-05 00:38:48 | INFO     | logging:callHandlers:1762 | 127.0.0.1:62770 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:38:58 | INFO     | logging:callHandlers:1762 | 127.0.0.1:54990 - "GET /health HTTP/1.1" 200
+2026-04-05 00:40:07 | INFO     | logging:callHandlers:1762 | 127.0.0.1:54328 - "GET /health HTTP/1.1" 200
+2026-04-05 00:40:09 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://www.naukri.com/code360/library/spring-vs-spring-boot-vs-spring-mvc
+2026-04-05 00:40:09 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://www.naukri.com/code360/library/spring-vs-spring-boot-vs-spring-mvc ---
+2026-04-05 00:40:09 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://www.naukri.com/code360/library/spring-vs-spring-boot-vs-spring-mvc ---
+2026-04-05 00:40:09 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: www.naukri.com
+2026-04-05 00:40:09 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: www.naukri.com
+2026-04-05 00:40:11 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: www.naukri.com
+2026-04-05 00:40:25 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: www.naukri.com
+2026-04-05 00:40:25 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://www.naukri.com/code360/library/spring-vs-spring-boot-vs-spring-mvc
+2026-04-05 00:40:26 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:40:26 | WARNING  | src.features.graph_features:extract:41 | Node www.naukri.com not found in graph. Returning default graph features.
+2026-04-05 00:40:26 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:40:26 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:40:26 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://www.naukri.com/code360/library/spring-vs-spring-boot-vs-spring-mvc
+2026-04-05 00:40:26 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: www.naukri.com
+2026-04-05 00:40:28 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: SAFE ---
+2026-04-05 00:40:28 | INFO     | logging:callHandlers:1762 | 127.0.0.1:54330 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:41:30 | INFO     | logging:callHandlers:1762 | 127.0.0.1:57550 - "GET /health HTTP/1.1" 200
+2026-04-05 00:41:30 | INFO     | logging:callHandlers:1762 | 127.0.0.1:57551 - "GET /health HTTP/1.1" 200
+2026-04-05 00:41:32 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://paypal.com.cgi-bin.secure.net
+2026-04-05 00:41:32 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://paypal.com.cgi-bin.secure.net ---
+2026-04-05 00:41:32 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://paypal.com.cgi-bin.secure.net ---
+2026-04-05 00:41:32 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: paypal.com.cgi-bin.secure.net
+2026-04-05 00:41:32 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: paypal.com.cgi-bin.secure.net
+2026-04-05 00:41:43 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - timed out
+2026-04-05 00:41:43 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: paypal.com.cgi-bin.secure.net
+2026-04-05 00:41:57 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: paypal.com.cgi-bin.secure.net
+2026-04-05 00:41:57 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for paypal.com.cgi-bin.secure.net: [Errno 11001] getaddrinfo failed
+2026-04-05 00:41:57 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://paypal.com.cgi-bin.secure.net
+2026-04-05 00:41:57 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://paypal.com.cgi-bin.secure.net: HTTPSConnectionPool(host='paypal.com.cgi-bin.secure.net', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001E6A826E270>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2026-04-05 00:41:57 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:41:57 | WARNING  | src.features.graph_features:extract:41 | Node paypal.com.cgi-bin.secure.net not found in graph. Returning default graph features.
+2026-04-05 00:41:57 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:41:57 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:41:57 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://paypal.com.cgi-bin.secure.net
+2026-04-05 00:41:57 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: paypal.com.cgi-bin.secure.net
+2026-04-05 00:42:08 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - timed out
+2026-04-05 00:42:08 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: PHISHING ---
+2026-04-05 00:42:08 | INFO     | logging:callHandlers:1762 | 127.0.0.1:57553 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:42:27 | INFO     | logging:callHandlers:1762 | 127.0.0.1:65128 - "GET /health HTTP/1.1" 200
+2026-04-05 00:42:27 | INFO     | logging:callHandlers:1762 | 127.0.0.1:65129 - "GET /health HTTP/1.1" 200
+2026-04-05 00:42:29 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://gaygal.com.cgi-bin.secure.net
+2026-04-05 00:42:29 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://gaygal.com.cgi-bin.secure.net ---
+2026-04-05 00:42:29 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://gaygal.com.cgi-bin.secure.net ---
+2026-04-05 00:42:29 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: gaygal.com.cgi-bin.secure.net
+2026-04-05 00:42:29 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: gaygal.com.cgi-bin.secure.net
+2026-04-05 00:42:40 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - timed out
+2026-04-05 00:42:40 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: gaygal.com.cgi-bin.secure.net
+2026-04-05 00:42:54 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: gaygal.com.cgi-bin.secure.net
+2026-04-05 00:42:54 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for gaygal.com.cgi-bin.secure.net: [Errno 11001] getaddrinfo failed
+2026-04-05 00:42:54 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://gaygal.com.cgi-bin.secure.net
+2026-04-05 00:42:54 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://gaygal.com.cgi-bin.secure.net: HTTPSConnectionPool(host='gaygal.com.cgi-bin.secure.net', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001E6A8226600>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2026-04-05 00:42:54 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:42:54 | WARNING  | src.features.graph_features:extract:41 | Node gaygal.com.cgi-bin.secure.net not found in graph. Returning default graph features.
+2026-04-05 00:42:54 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:42:54 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:42:54 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://gaygal.com.cgi-bin.secure.net
+2026-04-05 00:42:54 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: gaygal.com.cgi-bin.secure.net
+2026-04-05 00:43:05 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - timed out
+2026-04-05 00:43:05 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: PHISHING ---
+2026-04-05 00:43:05 | INFO     | logging:callHandlers:1762 | 127.0.0.1:65131 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:47:10 | INFO     | logging:callHandlers:1762 | 127.0.0.1:59653 - "GET /health HTTP/1.1" 200
+2026-04-05 00:47:10 | INFO     | logging:callHandlers:1762 | 127.0.0.1:59654 - "GET /health HTTP/1.1" 200
+2026-04-05 00:47:12 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://pickle-pixel.com/buddy/
+2026-04-05 00:47:12 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://pickle-pixel.com/buddy/ ---
+2026-04-05 00:47:12 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://pickle-pixel.com/buddy/ ---
+2026-04-05 00:47:12 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: pickle-pixel.com
+2026-04-05 00:47:12 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: pickle-pixel.com
+2026-04-05 00:47:13 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: pickle-pixel.com
+2026-04-05 00:47:27 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: pickle-pixel.com
+2026-04-05 00:47:28 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://pickle-pixel.com/buddy/
+2026-04-05 00:47:28 | INFO     | logging:callHandlers:1762 | 127.0.0.1:59666 - "GET /health HTTP/1.1" 200
+2026-04-05 00:47:29 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:47:29 | WARNING  | src.features.graph_features:extract:41 | Node pickle-pixel.com not found in graph. Returning default graph features.
+2026-04-05 00:47:29 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:47:29 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:47:29 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://pickle-pixel.com/buddy/
+2026-04-05 00:47:29 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: pickle-pixel.com
+2026-04-05 00:47:31 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: SAFE ---
+2026-04-05 00:47:31 | INFO     | logging:callHandlers:1762 | 127.0.0.1:59656 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:47:35 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56188 - "GET /health HTTP/1.1" 200
+2026-04-05 00:47:38 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://pickle-pixel.com/buddy/
+2026-04-05 00:47:38 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://pickle-pixel.com/buddy/ ---
+2026-04-05 00:47:38 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://pickle-pixel.com/buddy/ ---
+2026-04-05 00:47:38 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: pickle-pixel.com
+2026-04-05 00:47:38 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: pickle-pixel.com
+2026-04-05 00:47:39 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: pickle-pixel.com
+2026-04-05 00:47:53 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: pickle-pixel.com
+2026-04-05 00:47:53 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://pickle-pixel.com/buddy/
+2026-04-05 00:47:55 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:47:55 | WARNING  | src.features.graph_features:extract:41 | Node pickle-pixel.com not found in graph. Returning default graph features.
+2026-04-05 00:47:55 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:47:55 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:47:55 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://pickle-pixel.com/buddy/
+2026-04-05 00:47:55 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: pickle-pixel.com
+2026-04-05 00:47:56 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: SAFE ---
+2026-04-05 00:47:56 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56190 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-05 00:48:16 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60051 - "GET /health HTTP/1.1" 200
+2026-04-05 00:48:16 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60052 - "GET /health HTTP/1.1" 200
+2026-04-05 00:48:18 | INFO     | api.routes.predict:predict_url:19 | API Request: POST /api/v1/predict for https://github.com/ultraworkers/claw-code
+2026-04-05 00:48:18 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://github.com/ultraworkers/claw-code ---
+2026-04-05 00:48:18 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://github.com/ultraworkers/claw-code ---
+2026-04-05 00:48:18 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: github.com
+2026-04-05 00:48:18 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: github.com
+2026-04-05 00:48:19 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: github.com
+2026-04-05 00:48:33 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: github.com
+2026-04-05 00:48:34 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://github.com/ultraworkers/claw-code
+2026-04-05 00:48:35 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-05 00:48:35 | WARNING  | src.features.graph_features:extract:41 | Node github.com not found in graph. Returning default graph features.
+2026-04-05 00:48:35 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-05 00:48:35 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-05 00:48:35 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://github.com/ultraworkers/claw-code
+2026-04-05 00:48:35 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: github.com
+2026-04-05 00:48:37 | SUCCESS  | api.services.prediction_service:predict_single_url:151 | --- ✅ Prediction Completed: SAFE ---
+2026-04-05 00:48:37 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60054 - "POST /api/v1/predict HTTP/1.1" 200
