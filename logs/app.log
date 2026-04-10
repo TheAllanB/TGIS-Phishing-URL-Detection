@@ -14518,3 +14518,1248 @@ results.2
 2026-04-05 10:45:03 | INFO     | logging:callHandlers:1762 | 127.0.0.1:54416 - "GET /health HTTP/1.1" 200
 2026-04-05 10:45:05 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
 2026-04-05 10:45:05 | INFO     | logging:callHandlers:1762 | 127.0.0.1:57417 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 14:00:37 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6379
+2026-04-07 14:12:10 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6380
+2026-04-07 14:12:44 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6380
+2026-04-07 14:12:46 | INFO     | logging:callHandlers:1762 | Started server process [23260]
+2026-04-07 14:12:46 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-07 14:12:46 | ERROR    | logging:callHandlers:1762 | Traceback (most recent call last):
+  File "C:\Users\allan\Desktop\TGIS-Phishing-URL-Detection\api\main.py", line 19, in setup_database
+    print("✅ Database schema synchronized successfully.")
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 638, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 216, in merged_lifespan
+    async with original_context(app) as maybe_original_state:
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 216, in merged_lifespan
+    async with original_context(app) as maybe_original_state:
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 216, in merged_lifespan
+    async with original_context(app) as maybe_original_state:
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 241, in __aenter__
+    await self._router._startup()
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 4886, in _startup
+    handler()
+  File "C:\Users\allan\Desktop\TGIS-Phishing-URL-Detection\api\main.py", line 21, in setup_database
+    print(f"⚠️ Database connection failed: {e}")
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>
+
+2026-04-07 14:12:46 | ERROR    | logging:callHandlers:1762 | Application startup failed. Exiting.
+2026-04-07 14:14:44 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6380
+2026-04-07 14:14:46 | INFO     | logging:callHandlers:1762 | Started server process [18648]
+2026-04-07 14:14:46 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-07 14:14:46 | ERROR    | logging:callHandlers:1762 | Traceback (most recent call last):
+  File "C:\Users\allan\Desktop\TGIS-Phishing-URL-Detection\api\main.py", line 19, in setup_database
+    print("✅ Database schema synchronized successfully.")
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 638, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 216, in merged_lifespan
+    async with original_context(app) as maybe_original_state:
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 216, in merged_lifespan
+    async with original_context(app) as maybe_original_state:
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 216, in merged_lifespan
+    async with original_context(app) as maybe_original_state:
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 241, in __aenter__
+    await self._router._startup()
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 4886, in _startup
+    handler()
+  File "C:\Users\allan\Desktop\TGIS-Phishing-URL-Detection\api\main.py", line 21, in setup_database
+    print(f"⚠️ Database connection failed: {e}")
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>
+
+2026-04-07 14:14:46 | ERROR    | logging:callHandlers:1762 | Application startup failed. Exiting.
+2026-04-07 14:16:45 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6380
+2026-04-07 14:16:46 | INFO     | logging:callHandlers:1762 | Started server process [37664]
+2026-04-07 14:16:46 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-07 14:16:47 | INFO     | api.main:setup_database:20 | Database schema synchronized successfully.
+2026-04-07 14:16:47 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-07 14:16:47 | INFO     | logging:callHandlers:1762 | Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2026-04-07 14:16:49 | INFO     | logging:callHandlers:1762 | 127.0.0.1:62407 - "GET /health HTTP/1.1" 200
+2026-04-07 14:39:58 | INFO     | logging:callHandlers:1762 | 127.0.0.1:54186 - "GET /health HTTP/1.1" 200
+2026-04-07 15:03:11 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6380
+2026-04-07 15:03:13 | INFO     | logging:callHandlers:1762 | Started server process [14184]
+2026-04-07 15:03:13 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-07 15:03:13 | INFO     | api.main:setup_database:20 | Database schema synchronized successfully.
+2026-04-07 15:03:13 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-07 15:03:32 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56165 - "GET / HTTP/1.1" 200
+2026-04-07 15:03:32 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56165 - "GET /favicon.ico HTTP/1.1" 404
+2026-04-07 15:43:22 | INFO     | logging:callHandlers:1762 | Shutting down
+2026-04-07 15:43:22 | INFO     | logging:callHandlers:1762 | Waiting for application shutdown.
+2026-04-07 15:43:22 | INFO     | logging:callHandlers:1762 | Application shutdown complete.
+2026-04-07 15:43:22 | INFO     | logging:callHandlers:1762 | Finished server process [14184]
+2026-04-07 17:20:53 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6380
+2026-04-07 17:21:00 | INFO     | logging:callHandlers:1762 | Started server process [10904]
+2026-04-07 17:21:00 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-07 17:21:00 | INFO     | api.main:setup_database:20 | Database schema synchronized successfully.
+2026-04-07 17:21:00 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-07 17:21:10 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60068 - "GET / HTTP/1.1" 200
+2026-04-07 17:21:10 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60068 - "GET /favicon.ico HTTP/1.1" 404
+2026-04-07 17:21:26 | INFO     | logging:callHandlers:1762 | 127.0.0.1:64355 - "GET /health HTTP/1.1" 200
+2026-04-07 17:21:28 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:21:28 | INFO     | logging:callHandlers:1762 | 127.0.0.1:59007 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:21:35 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60328 - "GET /health HTTP/1.1" 200
+2026-04-07 17:21:37 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:21:37 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60330 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:21:41 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60332 - "GET /health HTTP/1.1" 200
+2026-04-07 17:21:43 | INFO     | api.services.prediction_service:__init__:39 | Initializing Prediction Service...
+2026-04-07 17:21:43 | INFO     | src.features.pipeline:__init__:14 | Initializing Feature Engineering Pipeline...
+2026-04-07 17:21:43 | INFO     | src.graph.builder:__init__:48 | Initialized empty TGIS Graph.
+2026-04-07 17:21:43 | INFO     | src.graph.builder:load_graph:122 | Trust graph loaded from: data/graphs/domain_graph.gpickle (74 nodes, 42 edges)
+2026-04-07 17:21:43 | INFO     | src.models.ensemble:__init__:20 | Loading Ensemble Models...
+2026-04-07 17:21:45 | SUCCESS  | src.models.ensemble:__init__:29 | Ensemble Models Loaded Successfully.
+2026-04-07 17:21:45 | INFO     | src.data.preprocessor:load:71 | Preprocessor models loaded from data/models
+2026-04-07 17:21:45 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for rnicrosoft.com
+2026-04-07 17:21:45 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: rnicrosoft.com ---
+2026-04-07 17:21:45 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: rnicrosoft.com ---
+2026-04-07 17:21:45 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: 
+2026-04-07 17:21:45 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: 
+2026-04-07 17:21:45 | ERROR    | src.external.whois_client:lookup:50 | WHOIS lookup failed for : Whois command returned no output
+2026-04-07 17:21:45 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: 
+2026-04-07 17:21:45 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: 
+2026-04-07 17:21:53 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for : [WinError 10061] No connection could be made because the target machine actively refused it
+2026-04-07 17:21:53 | INFO     | src.features.content_features:extract:34 | Extracting content features for: rnicrosoft.com
+2026-04-07 17:21:53 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for rnicrosoft.com: Invalid URL 'rnicrosoft.com': No scheme supplied. Perhaps you meant https://rnicrosoft.com?
+2026-04-07 17:21:53 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-07 17:21:53 | WARNING  | src.features.graph_features:extract:41 | Node  not found in graph. Returning default graph features.
+2026-04-07 17:21:53 | ERROR    | api.services.prediction_service:predict_single_url:188 | Critical error in PredictionService: The dtype of the filling value (i.e. dtype('O')) cannot be cast to the input data that is dtype('float64'). Make sure that the dtypes of the input data is of the same kind between fit and transform.
+2026-04-07 17:21:53 | ERROR    | api.routes.predict:predict_url:28 | Prediction Pipeline Error: The phishing detection pipeline encountered an error: The dtype of the filling value (i.e. dtype('O')) cannot be cast to the input data that is dtype('float64'). Make sure that the dtypes of the input data is of the same kind between fit and transform.
+2026-04-07 17:21:53 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60334 - "POST /api/v1/predict HTTP/1.1" 500
+2026-04-07 17:21:55 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:21:55 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60340 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:22:11 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60050 - "GET /health HTTP/1.1" 200
+2026-04-07 17:22:13 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:22:13 | INFO     | logging:callHandlers:1762 | 127.0.0.1:57668 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:23:17 | INFO     | logging:callHandlers:1762 | 127.0.0.1:64923 - "GET /health HTTP/1.1" 200
+2026-04-07 17:23:18 | INFO     | logging:callHandlers:1762 | 127.0.0.1:64924 - "GET /health HTTP/1.1" 200
+2026-04-07 17:23:24 | INFO     | logging:callHandlers:1762 | 127.0.0.1:58211 - "GET /health HTTP/1.1" 200
+2026-04-07 17:23:26 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:23:26 | INFO     | logging:callHandlers:1762 | 127.0.0.1:59933 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:24:43 | INFO     | logging:callHandlers:1762 | Shutting down
+2026-04-07 17:24:43 | INFO     | logging:callHandlers:1762 | Waiting for application shutdown.
+2026-04-07 17:24:43 | INFO     | logging:callHandlers:1762 | Application shutdown complete.
+2026-04-07 17:24:43 | INFO     | logging:callHandlers:1762 | Finished server process [10904]
+2026-04-07 17:24:53 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6380
+2026-04-07 17:24:55 | INFO     | logging:callHandlers:1762 | Started server process [9420]
+2026-04-07 17:24:55 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-07 17:24:56 | INFO     | api.main:setup_database:20 | Database schema synchronized successfully.
+2026-04-07 17:24:56 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-07 17:25:41 | INFO     | logging:callHandlers:1762 | 127.0.0.1:64257 - "GET /health HTTP/1.1" 200
+2026-04-07 17:25:41 | INFO     | logging:callHandlers:1762 | 127.0.0.1:64259 - "GET /health HTTP/1.1" 200
+2026-04-07 17:25:41 | INFO     | logging:callHandlers:1762 | 127.0.0.1:64261 - "GET /health HTTP/1.1" 200
+2026-04-07 17:25:43 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:25:43 | INFO     | logging:callHandlers:1762 | 127.0.0.1:65265 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:25:43 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:25:43 | INFO     | logging:callHandlers:1762 | 127.0.0.1:65266 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:25:43 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:25:43 | INFO     | logging:callHandlers:1762 | 127.0.0.1:65267 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:25:54 | INFO     | logging:callHandlers:1762 | 127.0.0.1:65271 - "GET /health HTTP/1.1" 200
+2026-04-07 17:25:54 | INFO     | logging:callHandlers:1762 | 127.0.0.1:65272 - "GET /health HTTP/1.1" 200
+2026-04-07 17:25:56 | INFO     | api.services.prediction_service:__init__:39 | Initializing Prediction Service...
+2026-04-07 17:25:56 | INFO     | src.features.pipeline:__init__:14 | Initializing Feature Engineering Pipeline...
+2026-04-07 17:25:56 | INFO     | src.graph.builder:__init__:48 | Initialized empty TGIS Graph.
+2026-04-07 17:25:56 | INFO     | src.graph.builder:load_graph:122 | Trust graph loaded from: data/graphs/domain_graph.gpickle (74 nodes, 42 edges)
+2026-04-07 17:25:56 | INFO     | src.models.ensemble:__init__:20 | Loading Ensemble Models...
+2026-04-07 17:25:58 | SUCCESS  | src.models.ensemble:__init__:29 | Ensemble Models Loaded Successfully.
+2026-04-07 17:25:58 | INFO     | src.data.preprocessor:load:74 | Preprocessor models loaded from data/models
+2026-04-07 17:25:58 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for rnicrosoft.com
+2026-04-07 17:25:58 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: rnicrosoft.com ---
+2026-04-07 17:25:58 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: rnicrosoft.com ---
+2026-04-07 17:25:58 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: 
+2026-04-07 17:25:58 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: 
+2026-04-07 17:25:58 | ERROR    | src.external.whois_client:lookup:50 | WHOIS lookup failed for : Whois command returned no output
+2026-04-07 17:25:58 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: 
+2026-04-07 17:26:06 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for : [WinError 10061] No connection could be made because the target machine actively refused it
+2026-04-07 17:26:06 | INFO     | src.features.content_features:extract:34 | Extracting content features for: rnicrosoft.com
+2026-04-07 17:26:06 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for rnicrosoft.com: Invalid URL 'rnicrosoft.com': No scheme supplied. Perhaps you meant https://rnicrosoft.com?
+2026-04-07 17:26:06 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-07 17:26:06 | WARNING  | src.features.graph_features:extract:41 | Node  not found in graph. Returning default graph features.
+2026-04-07 17:26:06 | ERROR    | api.services.prediction_service:predict_single_url:188 | Critical error in PredictionService: The dtype of the filling value (i.e. dtype('O')) cannot be cast to the input data that is dtype('float64'). Make sure that the dtypes of the input data is of the same kind between fit and transform.
+2026-04-07 17:26:06 | ERROR    | api.routes.predict:predict_url:28 | Prediction Pipeline Error: The phishing detection pipeline encountered an error: The dtype of the filling value (i.e. dtype('O')) cannot be cast to the input data that is dtype('float64'). Make sure that the dtypes of the input data is of the same kind between fit and transform.
+2026-04-07 17:26:06 | INFO     | logging:callHandlers:1762 | 127.0.0.1:65275 - "POST /api/v1/predict HTTP/1.1" 500
+2026-04-07 17:26:08 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:26:08 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63339 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:26:18 | INFO     | logging:callHandlers:1762 | Shutting down
+2026-04-07 17:26:18 | INFO     | logging:callHandlers:1762 | Waiting for application shutdown.
+2026-04-07 17:26:18 | INFO     | logging:callHandlers:1762 | Application shutdown complete.
+2026-04-07 17:26:18 | INFO     | logging:callHandlers:1762 | Finished server process [9420]
+2026-04-07 17:26:47 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6380
+2026-04-07 17:26:48 | INFO     | logging:callHandlers:1762 | Started server process [676]
+2026-04-07 17:26:48 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-07 17:26:49 | INFO     | api.main:setup_database:20 | Database schema synchronized successfully.
+2026-04-07 17:26:49 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-07 17:26:58 | INFO     | logging:callHandlers:1762 | 127.0.0.1:58904 - "GET /health HTTP/1.1" 200
+2026-04-07 17:26:58 | INFO     | logging:callHandlers:1762 | 127.0.0.1:58906 - "GET /health HTTP/1.1" 200
+2026-04-07 17:26:59 | INFO     | logging:callHandlers:1762 | 127.0.0.1:58908 - "GET /health HTTP/1.1" 200
+2026-04-07 17:27:00 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:27:00 | INFO     | logging:callHandlers:1762 | 127.0.0.1:58910 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:27:00 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:27:00 | INFO     | logging:callHandlers:1762 | 127.0.0.1:58911 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:27:01 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:27:01 | INFO     | logging:callHandlers:1762 | 127.0.0.1:58912 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:27:03 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63511 - "GET /health HTTP/1.1" 200
+2026-04-07 17:27:05 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:27:05 | INFO     | logging:callHandlers:1762 | 127.0.0.1:64838 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:27:05 | INFO     | logging:callHandlers:1762 | 127.0.0.1:64839 - "GET /health HTTP/1.1" 200
+2026-04-07 17:27:06 | INFO     | logging:callHandlers:1762 | 127.0.0.1:64840 - "GET /health HTTP/1.1" 200
+2026-04-07 17:27:08 | INFO     | api.services.prediction_service:__init__:39 | Initializing Prediction Service...
+2026-04-07 17:27:08 | INFO     | src.features.pipeline:__init__:14 | Initializing Feature Engineering Pipeline...
+2026-04-07 17:27:08 | INFO     | src.graph.builder:__init__:48 | Initialized empty TGIS Graph.
+2026-04-07 17:27:08 | INFO     | src.graph.builder:load_graph:122 | Trust graph loaded from: data/graphs/domain_graph.gpickle (74 nodes, 42 edges)
+2026-04-07 17:27:08 | INFO     | src.models.ensemble:__init__:20 | Loading Ensemble Models...
+2026-04-07 17:27:09 | SUCCESS  | src.models.ensemble:__init__:29 | Ensemble Models Loaded Successfully.
+2026-04-07 17:27:09 | INFO     | src.data.preprocessor:load:74 | Preprocessor models loaded from data/models
+2026-04-07 17:27:09 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for rnicrosoft.com
+2026-04-07 17:27:09 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: rnicrosoft.com ---
+2026-04-07 17:27:09 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: rnicrosoft.com ---
+2026-04-07 17:27:09 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: 
+2026-04-07 17:27:09 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: 
+2026-04-07 17:27:09 | ERROR    | src.external.whois_client:lookup:50 | WHOIS lookup failed for : Whois command returned no output
+2026-04-07 17:27:09 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: 
+2026-04-07 17:27:16 | INFO     | logging:callHandlers:1762 | 127.0.0.1:64361 - "GET /health HTTP/1.1" 200
+2026-04-07 17:27:17 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for : [WinError 10061] No connection could be made because the target machine actively refused it
+2026-04-07 17:27:17 | INFO     | src.features.content_features:extract:34 | Extracting content features for: rnicrosoft.com
+2026-04-07 17:27:17 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for rnicrosoft.com: Invalid URL 'rnicrosoft.com': No scheme supplied. Perhaps you meant https://rnicrosoft.com?
+2026-04-07 17:27:17 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-07 17:27:17 | WARNING  | src.features.graph_features:extract:41 | Node  not found in graph. Returning default graph features.
+2026-04-07 17:27:17 | ERROR    | api.services.prediction_service:predict_single_url:188 | Critical error in PredictionService: The dtype of the filling value (i.e. dtype('O')) cannot be cast to the input data that is dtype('float64'). Make sure that the dtypes of the input data is of the same kind between fit and transform.
+2026-04-07 17:27:17 | ERROR    | api.routes.predict:predict_url:28 | Prediction Pipeline Error: The phishing detection pipeline encountered an error: The dtype of the filling value (i.e. dtype('O')) cannot be cast to the input data that is dtype('float64'). Make sure that the dtypes of the input data is of the same kind between fit and transform.
+2026-04-07 17:27:17 | INFO     | logging:callHandlers:1762 | 127.0.0.1:54964 - "POST /api/v1/predict HTTP/1.1" 500
+2026-04-07 17:27:18 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:27:18 | INFO     | logging:callHandlers:1762 | 127.0.0.1:64363 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:27:26 | INFO     | logging:callHandlers:1762 | 127.0.0.1:50945 - "GET /health HTTP/1.1" 200
+2026-04-07 17:27:26 | INFO     | logging:callHandlers:1762 | 127.0.0.1:50946 - "GET /health HTTP/1.1" 200
+2026-04-07 17:27:28 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for rnicrosoft.com
+2026-04-07 17:27:28 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: rnicrosoft.com ---
+2026-04-07 17:27:28 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: rnicrosoft.com ---
+2026-04-07 17:27:28 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: 
+2026-04-07 17:27:28 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: 
+2026-04-07 17:27:28 | ERROR    | src.external.whois_client:lookup:50 | WHOIS lookup failed for : Whois command returned no output
+2026-04-07 17:27:28 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: 
+2026-04-07 17:27:37 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for : [WinError 10061] No connection could be made because the target machine actively refused it
+2026-04-07 17:27:37 | INFO     | src.features.content_features:extract:34 | Extracting content features for: rnicrosoft.com
+2026-04-07 17:27:37 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for rnicrosoft.com: Invalid URL 'rnicrosoft.com': No scheme supplied. Perhaps you meant https://rnicrosoft.com?
+2026-04-07 17:27:37 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-07 17:27:37 | WARNING  | src.features.graph_features:extract:41 | Node  not found in graph. Returning default graph features.
+2026-04-07 17:27:37 | ERROR    | api.services.prediction_service:predict_single_url:188 | Critical error in PredictionService: The dtype of the filling value (i.e. dtype('O')) cannot be cast to the input data that is dtype('float64'). Make sure that the dtypes of the input data is of the same kind between fit and transform.
+2026-04-07 17:27:37 | ERROR    | api.routes.predict:predict_url:28 | Prediction Pipeline Error: The phishing detection pipeline encountered an error: The dtype of the filling value (i.e. dtype('O')) cannot be cast to the input data that is dtype('float64'). Make sure that the dtypes of the input data is of the same kind between fit and transform.
+2026-04-07 17:27:37 | INFO     | logging:callHandlers:1762 | 127.0.0.1:62591 - "POST /api/v1/predict HTTP/1.1" 500
+2026-04-07 17:27:39 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:27:39 | INFO     | logging:callHandlers:1762 | 127.0.0.1:58193 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:29:57 | INFO     | logging:callHandlers:1762 | Shutting down
+2026-04-07 17:29:57 | INFO     | logging:callHandlers:1762 | Waiting for application shutdown.
+2026-04-07 17:29:57 | INFO     | logging:callHandlers:1762 | Application shutdown complete.
+2026-04-07 17:29:57 | INFO     | logging:callHandlers:1762 | Finished server process [676]
+2026-04-07 17:30:06 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6380
+2026-04-07 17:30:08 | INFO     | logging:callHandlers:1762 | Started server process [19852]
+2026-04-07 17:30:08 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-07 17:30:08 | INFO     | api.main:setup_database:20 | Database schema synchronized successfully.
+2026-04-07 17:30:08 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-07 17:30:12 | WARNING  | src.data.preprocessor:load:78 | Imputer statistics_ was dtype object — cast to float64 (sklearn version mismatch).
+2026-04-07 17:30:12 | INFO     | src.data.preprocessor:load:81 | Preprocessor models loaded from data/models
+2026-04-07 17:38:16 | INFO     | src.data.preprocessor:load:81 | Preprocessor models loaded from data/models
+2026-04-07 17:38:37 | INFO     | logging:callHandlers:1762 | Shutting down
+2026-04-07 17:38:37 | INFO     | logging:callHandlers:1762 | Waiting for application shutdown.
+2026-04-07 17:38:37 | INFO     | logging:callHandlers:1762 | Application shutdown complete.
+2026-04-07 17:38:37 | INFO     | logging:callHandlers:1762 | Finished server process [19852]
+2026-04-07 17:38:47 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6380
+2026-04-07 17:38:48 | INFO     | logging:callHandlers:1762 | Started server process [1704]
+2026-04-07 17:38:48 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-07 17:38:48 | INFO     | api.main:setup_database:20 | Database schema synchronized successfully.
+2026-04-07 17:38:48 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-07 17:38:59 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56310 - "GET /health HTTP/1.1" 200
+2026-04-07 17:38:59 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56311 - "GET /health HTTP/1.1" 200
+2026-04-07 17:38:59 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56309 - "GET /health HTTP/1.1" 200
+2026-04-07 17:38:59 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56314 - "GET /health HTTP/1.1" 200
+2026-04-07 17:39:01 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:39:01 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56316 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:39:01 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:39:01 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56317 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:39:01 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:39:01 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56318 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:39:09 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63456 - "GET /health HTTP/1.1" 200
+2026-04-07 17:39:09 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63457 - "GET /health HTTP/1.1" 200
+2026-04-07 17:39:11 | INFO     | api.services.prediction_service:__init__:39 | Initializing Prediction Service...
+2026-04-07 17:39:11 | INFO     | src.features.pipeline:__init__:14 | Initializing Feature Engineering Pipeline...
+2026-04-07 17:39:11 | INFO     | src.graph.builder:__init__:48 | Initialized empty TGIS Graph.
+2026-04-07 17:39:11 | INFO     | src.graph.builder:load_graph:122 | Trust graph loaded from: data/graphs/domain_graph.gpickle (74 nodes, 42 edges)
+2026-04-07 17:39:11 | INFO     | src.models.ensemble:__init__:20 | Loading Ensemble Models...
+2026-04-07 17:39:12 | SUCCESS  | src.models.ensemble:__init__:29 | Ensemble Models Loaded Successfully.
+2026-04-07 17:39:12 | INFO     | src.data.preprocessor:load:81 | Preprocessor models loaded from data/models
+2026-04-07 17:39:12 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for rnicrosoft.com
+2026-04-07 17:39:12 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: rnicrosoft.com ---
+2026-04-07 17:39:12 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: rnicrosoft.com ---
+2026-04-07 17:39:12 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: 
+2026-04-07 17:39:12 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: 
+2026-04-07 17:39:12 | ERROR    | src.external.whois_client:lookup:50 | WHOIS lookup failed for : Whois command returned no output
+2026-04-07 17:39:12 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: 
+2026-04-07 17:39:21 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for : [WinError 10061] No connection could be made because the target machine actively refused it
+2026-04-07 17:39:21 | INFO     | src.features.content_features:extract:34 | Extracting content features for: rnicrosoft.com
+2026-04-07 17:39:21 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for rnicrosoft.com: Invalid URL 'rnicrosoft.com': No scheme supplied. Perhaps you meant https://rnicrosoft.com?
+2026-04-07 17:39:21 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-07 17:39:21 | WARNING  | src.features.graph_features:extract:41 | Node  not found in graph. Returning default graph features.
+2026-04-07 17:39:21 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-07 17:39:21 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-07 17:39:21 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: rnicrosoft.com
+2026-04-07 17:39:21 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: 
+2026-04-07 17:39:21 | ERROR    | src.external.whois_client:lookup:50 | WHOIS lookup failed for : Whois command returned no output
+2026-04-07 17:39:21 | SUCCESS  | api.services.prediction_service:predict_single_url:152 | --- ✅ Prediction Completed: SAFE ---
+2026-04-07 17:39:21 | INFO     | api.services.prediction_service:predict_single_url:179 | 💾 Results and feature vector persisted to DB (ID: cf87cc15-1d17-42d3-825b-76f6e4c061fb)
+2026-04-07 17:39:21 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63459 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-07 17:39:23 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:39:23 | INFO     | logging:callHandlers:1762 | 127.0.0.1:54758 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:39:56 | INFO     | logging:callHandlers:1762 | 127.0.0.1:50061 - "GET /health HTTP/1.1" 200
+2026-04-07 17:39:58 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:39:58 | INFO     | logging:callHandlers:1762 | 127.0.0.1:50063 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:40:23 | INFO     | logging:callHandlers:1762 | 127.0.0.1:55985 - "GET /health HTTP/1.1" 200
+2026-04-07 17:40:25 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:40:25 | INFO     | logging:callHandlers:1762 | 127.0.0.1:50291 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:40:33 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60751 - "GET /health HTTP/1.1" 200
+2026-04-07 17:40:35 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for www.bankofamerica.com.secure-login.net
+2026-04-07 17:40:35 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: www.bankofamerica.com.secure-login.net ---
+2026-04-07 17:40:35 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: www.bankofamerica.com.secure-login.net ---
+2026-04-07 17:40:35 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: 
+2026-04-07 17:40:35 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: 
+2026-04-07 17:40:35 | ERROR    | src.external.whois_client:lookup:50 | WHOIS lookup failed for : Whois command returned no output
+2026-04-07 17:40:35 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: 
+2026-04-07 17:40:43 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for : [WinError 10061] No connection could be made because the target machine actively refused it
+2026-04-07 17:40:43 | INFO     | src.features.content_features:extract:34 | Extracting content features for: www.bankofamerica.com.secure-login.net
+2026-04-07 17:40:43 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for www.bankofamerica.com.secure-login.net: Invalid URL 'www.bankofamerica.com.secure-login.net': No scheme supplied. Perhaps you meant https://www.bankofamerica.com.secure-login.net?
+2026-04-07 17:40:43 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-07 17:40:43 | WARNING  | src.features.graph_features:extract:41 | Node  not found in graph. Returning default graph features.
+2026-04-07 17:40:43 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-07 17:40:43 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-07 17:40:43 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: www.bankofamerica.com.secure-login.net
+2026-04-07 17:40:43 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: 
+2026-04-07 17:40:43 | ERROR    | src.external.whois_client:lookup:50 | WHOIS lookup failed for : Whois command returned no output
+2026-04-07 17:40:43 | SUCCESS  | api.services.prediction_service:predict_single_url:152 | --- ✅ Prediction Completed: SAFE ---
+2026-04-07 17:40:43 | INFO     | api.services.prediction_service:predict_single_url:179 | 💾 Results and feature vector persisted to DB (ID: 3a6added-f09c-41be-bc6c-341b57237f9a)
+2026-04-07 17:40:43 | INFO     | logging:callHandlers:1762 | 127.0.0.1:52834 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-07 17:40:45 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:40:45 | INFO     | logging:callHandlers:1762 | 127.0.0.1:52840 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:44:30 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63983 - "GET /health HTTP/1.1" 200
+2026-04-07 17:44:30 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63984 - "GET /health HTTP/1.1" 200
+2026-04-07 17:44:32 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for https://surveys.infosysapps.com/r/a/InfosysDSESPoffcampus
+2026-04-07 17:44:32 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://surveys.infosysapps.com/r/a/InfosysDSESPoffcampus ---
+2026-04-07 17:44:32 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://surveys.infosysapps.com/r/a/InfosysDSESPoffcampus ---
+2026-04-07 17:44:32 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: surveys.infosysapps.com
+2026-04-07 17:44:32 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: surveys.infosysapps.com
+2026-04-07 17:44:43 | ERROR    | logging:callHandlers:1762 | Error trying to connect to socket: closing socket - timed out
+2026-04-07 17:44:43 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: surveys.infosysapps.com
+2026-04-07 17:44:44 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: surveys.infosysapps.com
+2026-04-07 17:44:44 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://surveys.infosysapps.com/r/a/InfosysDSESPoffcampus
+2026-04-07 17:44:44 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-07 17:44:44 | WARNING  | src.features.graph_features:extract:41 | Node surveys.infosysapps.com not found in graph. Returning default graph features.
+2026-04-07 17:44:44 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-07 17:44:44 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-07 17:44:44 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://surveys.infosysapps.com/r/a/InfosysDSESPoffcampus
+2026-04-07 17:44:44 | SUCCESS  | api.services.prediction_service:predict_single_url:152 | --- ✅ Prediction Completed: SAFE ---
+2026-04-07 17:44:44 | INFO     | api.services.prediction_service:predict_single_url:179 | 💾 Results and feature vector persisted to DB (ID: 76fad513-fe74-49ab-a38b-cb76964a9078)
+2026-04-07 17:44:44 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63986 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-07 17:44:46 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:44:46 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63993 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:44:57 | INFO     | logging:callHandlers:1762 | 127.0.0.1:51742 - "GET /health HTTP/1.1" 200
+2026-04-07 17:44:59 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:44:59 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63631 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 17:45:06 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60286 - "GET /health HTTP/1.1" 200
+2026-04-07 17:45:08 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for g00gle.com
+2026-04-07 17:45:08 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: g00gle.com ---
+2026-04-07 17:45:08 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: g00gle.com ---
+2026-04-07 17:45:08 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: 
+2026-04-07 17:45:08 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: 
+2026-04-07 17:45:08 | ERROR    | src.external.whois_client:lookup:50 | WHOIS lookup failed for : Whois command returned no output
+2026-04-07 17:45:08 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: 
+2026-04-07 17:45:16 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for : [WinError 10061] No connection could be made because the target machine actively refused it
+2026-04-07 17:45:16 | INFO     | src.features.content_features:extract:34 | Extracting content features for: g00gle.com
+2026-04-07 17:45:16 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for g00gle.com: Invalid URL 'g00gle.com': No scheme supplied. Perhaps you meant https://g00gle.com?
+2026-04-07 17:45:16 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-07 17:45:16 | WARNING  | src.features.graph_features:extract:41 | Node  not found in graph. Returning default graph features.
+2026-04-07 17:45:16 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-07 17:45:16 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-07 17:45:16 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: g00gle.com
+2026-04-07 17:45:16 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: 
+2026-04-07 17:45:16 | ERROR    | src.external.whois_client:lookup:50 | WHOIS lookup failed for : Whois command returned no output
+2026-04-07 17:45:16 | SUCCESS  | api.services.prediction_service:predict_single_url:152 | --- ✅ Prediction Completed: SAFE ---
+2026-04-07 17:45:16 | INFO     | api.services.prediction_service:predict_single_url:179 | 💾 Results and feature vector persisted to DB (ID: faaed958-8847-42e6-be27-32c97eb2b6a5)
+2026-04-07 17:45:16 | INFO     | logging:callHandlers:1762 | 127.0.0.1:50175 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-07 17:45:18 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 17:45:18 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60751 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 18:48:44 | INFO     | logging:callHandlers:1762 | Shutting down
+2026-04-07 18:48:44 | INFO     | logging:callHandlers:1762 | Waiting for application shutdown.
+2026-04-07 18:48:44 | INFO     | logging:callHandlers:1762 | Application shutdown complete.
+2026-04-07 18:48:44 | INFO     | logging:callHandlers:1762 | Finished server process [1704]
+2026-04-07 18:48:54 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6379
+2026-04-07 18:48:56 | INFO     | logging:callHandlers:1762 | Started server process [5556]
+2026-04-07 18:48:56 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-07 18:49:00 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-07 18:49:00 | INFO     | logging:callHandlers:1762 | Shutting down
+2026-04-07 18:49:01 | INFO     | logging:callHandlers:1762 | Waiting for application shutdown.
+2026-04-07 18:49:01 | INFO     | logging:callHandlers:1762 | Application shutdown complete.
+2026-04-07 18:49:01 | INFO     | logging:callHandlers:1762 | Finished server process [5556]
+2026-04-07 18:49:09 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6379
+2026-04-07 18:49:11 | INFO     | logging:callHandlers:1762 | Started server process [21768]
+2026-04-07 18:49:11 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-07 18:49:15 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-07 20:29:30 | INFO     | logging:callHandlers:1762 | Shutting down
+2026-04-07 20:29:30 | INFO     | logging:callHandlers:1762 | Waiting for application shutdown.
+2026-04-07 20:29:30 | INFO     | logging:callHandlers:1762 | Application shutdown complete.
+2026-04-07 20:29:30 | INFO     | logging:callHandlers:1762 | Finished server process [21768]
+2026-04-07 20:30:13 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6379
+2026-04-07 20:30:16 | INFO     | logging:callHandlers:1762 | Started server process [20736]
+2026-04-07 20:30:16 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-07 20:30:20 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-07 20:30:20 | INFO     | logging:callHandlers:1762 | 127.0.0.1:64677 - "GET / HTTP/1.1" 200
+2026-04-07 20:30:27 | INFO     | logging:callHandlers:1762 | 127.0.0.1:59381 - "GET /docs HTTP/1.1" 200
+2026-04-07 20:30:27 | INFO     | logging:callHandlers:1762 | 127.0.0.1:59381 - "GET /openapi.json HTTP/1.1" 200
+2026-04-07 20:31:08 | INFO     | logging:callHandlers:1762 | 127.0.0.1:62282 - "GET /api/v1/predict HTTP/1.1" 405
+2026-04-07 20:31:28 | INFO     | logging:callHandlers:1762 | 127.0.0.1:54583 - "GET /api/v1/predict HTTP/1.1" 405
+2026-04-07 20:31:44 | INFO     | logging:callHandlers:1762 | 127.0.0.1:57708 - "GET /api/v1/predict HTTP/1.1" 405
+2026-04-07 20:45:53 | INFO     | logging:callHandlers:1762 | 127.0.0.1:49988 - "GET /health HTTP/1.1" 200
+2026-04-07 20:45:55 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 20:45:59 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-07 20:45:59 | INFO     | logging:callHandlers:1762 | 127.0.0.1:49990 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 20:45:59 | INFO     | logging:callHandlers:1762 | 127.0.0.1:49996 - "GET /health HTTP/1.1" 200
+2026-04-07 20:45:59 | INFO     | logging:callHandlers:1762 | 127.0.0.1:49997 - "GET /health HTTP/1.1" 200
+2026-04-07 20:46:01 | INFO     | api.services.prediction_service:__init__:39 | Initializing Prediction Service...
+2026-04-07 20:46:01 | INFO     | src.features.pipeline:__init__:14 | Initializing Feature Engineering Pipeline...
+2026-04-07 20:46:01 | INFO     | src.graph.builder:__init__:48 | Initialized empty TGIS Graph.
+2026-04-07 20:46:01 | INFO     | src.graph.builder:load_graph:122 | Trust graph loaded from: data/graphs/domain_graph.gpickle (74 nodes, 42 edges)
+2026-04-07 20:46:01 | INFO     | src.models.ensemble:__init__:20 | Loading Ensemble Models...
+2026-04-07 20:46:01 | SUCCESS  | src.models.ensemble:__init__:29 | Ensemble Models Loaded Successfully.
+2026-04-07 20:46:01 | INFO     | src.data.preprocessor:load:71 | Preprocessor models loaded from data/models
+2026-04-07 20:46:01 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for rnicrosoft.com
+2026-04-07 20:46:01 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: rnicrosoft.com ---
+2026-04-07 20:46:01 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: rnicrosoft.com ---
+2026-04-07 20:46:01 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: 
+2026-04-07 20:46:01 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: 
+2026-04-07 20:46:01 | ERROR    | src.external.whois_client:lookup:50 | WHOIS lookup failed for : Whois command returned no output
+2026-04-07 20:46:01 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: 
+2026-04-07 20:46:01 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: 
+2026-04-07 20:46:10 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for : [WinError 10061] No connection could be made because the target machine actively refused it
+2026-04-07 20:46:10 | INFO     | src.features.content_features:extract:34 | Extracting content features for: rnicrosoft.com
+2026-04-07 20:46:10 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for rnicrosoft.com: Invalid URL 'rnicrosoft.com': No scheme supplied. Perhaps you meant https://rnicrosoft.com?
+2026-04-07 20:46:10 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-07 20:46:10 | WARNING  | src.features.graph_features:extract:41 | Node  not found in graph. Returning default graph features.
+2026-04-07 20:46:10 | ERROR    | api.services.prediction_service:predict_single_url:188 | Critical error in PredictionService: The dtype of the filling value (i.e. dtype('O')) cannot be cast to the input data that is dtype('float64'). Make sure that the dtypes of the input data is of the same kind between fit and transform.
+2026-04-07 20:46:10 | ERROR    | api.routes.predict:predict_url:28 | Prediction Pipeline Error: The phishing detection pipeline encountered an error: The dtype of the filling value (i.e. dtype('O')) cannot be cast to the input data that is dtype('float64'). Make sure that the dtypes of the input data is of the same kind between fit and transform.
+2026-04-07 20:46:10 | INFO     | logging:callHandlers:1762 | 127.0.0.1:50060 - "POST /api/v1/predict HTTP/1.1" 500
+2026-04-07 20:46:12 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 20:46:16 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-07 20:46:16 | INFO     | logging:callHandlers:1762 | 127.0.0.1:50066 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 20:46:23 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60392 - "GET /health HTTP/1.1" 200
+2026-04-07 20:46:25 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-07 20:46:29 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-07 20:46:29 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60394 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-07 22:44:52 | INFO     | logging:callHandlers:1762 | Shutting down
+2026-04-07 22:44:52 | INFO     | logging:callHandlers:1762 | Waiting for application shutdown.
+2026-04-07 22:44:52 | INFO     | logging:callHandlers:1762 | Application shutdown complete.
+2026-04-07 22:44:52 | INFO     | logging:callHandlers:1762 | Finished server process [20736]
+2026-04-09 15:34:21 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6379
+2026-04-09 15:34:30 | INFO     | logging:callHandlers:1762 | Started server process [5608]
+2026-04-09 15:34:30 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-09 15:34:34 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-09 15:34:36 | INFO     | logging:callHandlers:1762 | 127.0.0.1:59381 - "GET /health HTTP/1.1" 200
+2026-04-09 15:34:38 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-09 15:34:43 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 15:34:43 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56661 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-09 15:34:53 | INFO     | logging:callHandlers:1762 | 127.0.0.1:54149 - "GET /health HTTP/1.1" 200
+2026-04-09 15:34:54 | INFO     | logging:callHandlers:1762 | 127.0.0.1:54150 - "GET /health HTTP/1.1" 200
+2026-04-09 15:34:56 | INFO     | api.services.prediction_service:__init__:39 | Initializing Prediction Service...
+2026-04-09 15:34:56 | INFO     | src.features.pipeline:__init__:14 | Initializing Feature Engineering Pipeline...
+2026-04-09 15:34:56 | INFO     | src.graph.builder:__init__:48 | Initialized empty TGIS Graph.
+2026-04-09 15:34:56 | INFO     | src.graph.builder:load_graph:122 | Trust graph loaded from: data/graphs/domain_graph.gpickle (74 nodes, 42 edges)
+2026-04-09 15:34:56 | INFO     | src.models.ensemble:__init__:20 | Loading Ensemble Models...
+2026-04-09 15:34:58 | SUCCESS  | src.models.ensemble:__init__:29 | Ensemble Models Loaded Successfully.
+2026-04-09 15:34:58 | INFO     | src.data.preprocessor:load:71 | Preprocessor models loaded from data/models
+2026-04-09 15:34:58 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for https://rnicrosoft.com
+2026-04-09 15:34:58 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://rnicrosoft.com ---
+2026-04-09 15:34:58 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://rnicrosoft.com ---
+2026-04-09 15:34:58 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: rnicrosoft.com
+2026-04-09 15:34:58 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: rnicrosoft.com
+2026-04-09 15:35:11 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: rnicrosoft.com
+2026-04-09 15:35:25 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: rnicrosoft.com
+2026-04-09 15:35:25 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for rnicrosoft.com: [Errno 11001] getaddrinfo failed
+2026-04-09 15:35:25 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://rnicrosoft.com
+2026-04-09 15:35:25 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://rnicrosoft.com: HTTPSConnectionPool(host='rnicrosoft.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000019E5D7ECEF0>: Failed to resolve 'rnicrosoft.com' ([Errno 11001] getaddrinfo failed)"))
+2026-04-09 15:35:25 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-09 15:35:25 | WARNING  | src.features.graph_features:extract:41 | Node rnicrosoft.com not found in graph. Returning default graph features.
+2026-04-09 15:35:25 | ERROR    | api.services.prediction_service:predict_single_url:188 | Critical error in PredictionService: The dtype of the filling value (i.e. dtype('O')) cannot be cast to the input data that is dtype('float64'). Make sure that the dtypes of the input data is of the same kind between fit and transform.
+2026-04-09 15:35:25 | ERROR    | api.routes.predict:predict_url:28 | Prediction Pipeline Error: The phishing detection pipeline encountered an error: The dtype of the filling value (i.e. dtype('O')) cannot be cast to the input data that is dtype('float64'). Make sure that the dtypes of the input data is of the same kind between fit and transform.
+2026-04-09 15:35:25 | INFO     | logging:callHandlers:1762 | 127.0.0.1:54152 - "POST /api/v1/predict HTTP/1.1" 500
+2026-04-09 15:35:27 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-09 15:35:32 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 15:35:32 | INFO     | logging:callHandlers:1762 | 127.0.0.1:62834 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-09 15:40:51 | INFO     | logging:callHandlers:1762 | Shutting down
+2026-04-09 15:40:51 | INFO     | logging:callHandlers:1762 | Waiting for application shutdown.
+2026-04-09 15:40:51 | INFO     | logging:callHandlers:1762 | Application shutdown complete.
+2026-04-09 15:40:51 | INFO     | logging:callHandlers:1762 | Finished server process [5608]
+2026-04-09 15:41:07 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6379
+2026-04-09 15:41:09 | INFO     | logging:callHandlers:1762 | Started server process [2960]
+2026-04-09 15:41:09 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-09 15:41:13 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-09 15:41:14 | ERROR    | logging:callHandlers:1762 | Traceback (most recent call last):
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 674, in run_until_complete
+    self.run_forever()
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 641, in run_forever
+    self._run_once()
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1987, in _run_once
+    handle._run()
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\server.py", line 68, in serve
+    with self.capture_signals():
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 144, in __exit__
+    next(self.gen)
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\server.py", line 328, in capture_signals
+    signal.raise_signal(captured_signal)
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 157, in _on_sigint
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\allan\AppData\Roaming\Python\Python312\site-packages\starlette\routing.py", line 700, in lifespan
+    await receive()
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\lifespan\on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\queues.py", line 158, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2026-04-09 15:41:18 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6379
+2026-04-09 15:41:20 | INFO     | logging:callHandlers:1762 | Started server process [2484]
+2026-04-09 15:41:20 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-09 15:41:24 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-09 15:41:24 | ERROR    | logging:callHandlers:1762 | Traceback (most recent call last):
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 674, in run_until_complete
+    self.run_forever()
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 641, in run_forever
+    self._run_once()
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1987, in _run_once
+    handle._run()
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\server.py", line 68, in serve
+    with self.capture_signals():
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 144, in __exit__
+    next(self.gen)
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\server.py", line 328, in capture_signals
+    signal.raise_signal(captured_signal)
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 157, in _on_sigint
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\allan\AppData\Roaming\Python\Python312\site-packages\starlette\routing.py", line 700, in lifespan
+    await receive()
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\lifespan\on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\queues.py", line 158, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2026-04-09 15:41:45 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6379
+2026-04-09 15:41:48 | INFO     | logging:callHandlers:1762 | Started server process [27820]
+2026-04-09 15:41:48 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-09 15:41:52 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-09 15:42:04 | INFO     | logging:callHandlers:1762 | 127.0.0.1:59623 - "GET /health HTTP/1.1" 200
+2026-04-09 15:42:06 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-09 15:42:11 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 15:42:11 | INFO     | logging:callHandlers:1762 | 127.0.0.1:57841 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-09 15:42:24 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56503 - "GET /health HTTP/1.1" 200
+2026-04-09 15:42:26 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-09 15:42:27 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56508 - "GET /health HTTP/1.1" 200
+2026-04-09 15:42:29 | INFO     | api.services.prediction_service:__init__:39 | Initializing Prediction Service...
+2026-04-09 15:42:29 | INFO     | src.features.pipeline:__init__:14 | Initializing Feature Engineering Pipeline...
+2026-04-09 15:42:29 | INFO     | src.graph.builder:__init__:48 | Initialized empty TGIS Graph.
+2026-04-09 15:42:29 | INFO     | src.graph.builder:load_graph:122 | Trust graph loaded from: data/graphs/domain_graph.gpickle (74 nodes, 42 edges)
+2026-04-09 15:42:29 | INFO     | src.models.ensemble:__init__:20 | Loading Ensemble Models...
+2026-04-09 15:42:30 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 15:42:30 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56506 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-09 15:42:31 | SUCCESS  | src.models.ensemble:__init__:29 | Ensemble Models Loaded Successfully.
+2026-04-09 15:42:31 | INFO     | src.data.preprocessor:load:78 | Preprocessor models loaded from data/models
+2026-04-09 15:42:31 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for https://rnicrosoft.com
+2026-04-09 15:42:31 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://rnicrosoft.com ---
+2026-04-09 15:42:31 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://rnicrosoft.com ---
+2026-04-09 15:42:31 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: rnicrosoft.com
+2026-04-09 15:42:31 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: rnicrosoft.com
+2026-04-09 15:42:31 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for rnicrosoft.com: [Errno 11001] getaddrinfo failed
+2026-04-09 15:42:31 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://rnicrosoft.com
+2026-04-09 15:42:31 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://rnicrosoft.com: HTTPSConnectionPool(host='rnicrosoft.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002C296E712B0>: Failed to resolve 'rnicrosoft.com' ([Errno 11001] getaddrinfo failed)"))
+2026-04-09 15:42:31 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-09 15:42:31 | WARNING  | src.features.graph_features:extract:41 | Node rnicrosoft.com not found in graph. Returning default graph features.
+2026-04-09 15:42:31 | ERROR    | api.services.prediction_service:predict_single_url:188 | Critical error in PredictionService: The dtype of the filling value (i.e. dtype('O')) cannot be cast to the input data that is dtype('float64'). Make sure that the dtypes of the input data is of the same kind between fit and transform.
+2026-04-09 15:42:31 | ERROR    | api.routes.predict:predict_url:28 | Prediction Pipeline Error: The phishing detection pipeline encountered an error: The dtype of the filling value (i.e. dtype('O')) cannot be cast to the input data that is dtype('float64'). Make sure that the dtypes of the input data is of the same kind between fit and transform.
+2026-04-09 15:42:31 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56511 - "POST /api/v1/predict HTTP/1.1" 500
+2026-04-09 15:42:33 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-09 15:42:38 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 15:42:38 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56513 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-09 15:45:13 | INFO     | logging:callHandlers:1762 | Shutting down
+2026-04-09 15:45:13 | INFO     | logging:callHandlers:1762 | Waiting for application shutdown.
+2026-04-09 15:45:13 | INFO     | logging:callHandlers:1762 | Application shutdown complete.
+2026-04-09 15:45:13 | INFO     | logging:callHandlers:1762 | Finished server process [27820]
+2026-04-09 15:45:27 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6379
+2026-04-09 15:45:29 | INFO     | logging:callHandlers:1762 | Started server process [14732]
+2026-04-09 15:45:29 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-09 15:45:33 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-09 15:47:21 | INFO     | logging:callHandlers:1762 | Shutting down
+2026-04-09 15:47:21 | INFO     | logging:callHandlers:1762 | Waiting for application shutdown.
+2026-04-09 15:47:21 | INFO     | logging:callHandlers:1762 | Application shutdown complete.
+2026-04-09 15:47:21 | INFO     | logging:callHandlers:1762 | Finished server process [14732]
+2026-04-09 15:47:28 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6379
+2026-04-09 15:47:31 | INFO     | logging:callHandlers:1762 | Started server process [18768]
+2026-04-09 15:47:31 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-09 15:47:35 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-09 15:47:54 | INFO     | logging:callHandlers:1762 | 127.0.0.1:53145 - "GET /health HTTP/1.1" 200
+2026-04-09 15:47:55 | INFO     | logging:callHandlers:1762 | 127.0.0.1:53147 - "GET /health HTTP/1.1" 200
+2026-04-09 15:47:56 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-09 15:48:00 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 15:48:00 | INFO     | logging:callHandlers:1762 | 127.0.0.1:53148 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-09 15:48:53 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63691 - "GET /health HTTP/1.1" 200
+2026-04-09 15:48:55 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63694 - "GET /health HTTP/1.1" 200
+2026-04-09 15:48:57 | INFO     | api.services.prediction_service:__init__:39 | Initializing Prediction Service...
+2026-04-09 15:48:57 | INFO     | src.features.pipeline:__init__:14 | Initializing Feature Engineering Pipeline...
+2026-04-09 15:48:57 | INFO     | src.graph.builder:__init__:48 | Initialized empty TGIS Graph.
+2026-04-09 15:48:57 | INFO     | src.graph.builder:load_graph:122 | Trust graph loaded from: data/graphs/domain_graph.gpickle (74 nodes, 42 edges)
+2026-04-09 15:48:57 | INFO     | src.models.ensemble:__init__:20 | Loading Ensemble Models...
+2026-04-09 15:48:58 | SUCCESS  | src.models.ensemble:__init__:29 | Ensemble Models Loaded Successfully.
+2026-04-09 15:48:58 | INFO     | src.data.preprocessor:load:90 | Preprocessor models loaded from data/models
+2026-04-09 15:48:58 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for https://rnicrosoft.com
+2026-04-09 15:48:58 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://rnicrosoft.com ---
+2026-04-09 15:48:58 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://rnicrosoft.com ---
+2026-04-09 15:48:58 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: rnicrosoft.com
+2026-04-09 15:48:58 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: rnicrosoft.com
+2026-04-09 15:48:58 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for rnicrosoft.com: [Errno 11001] getaddrinfo failed
+2026-04-09 15:48:58 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://rnicrosoft.com
+2026-04-09 15:48:58 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://rnicrosoft.com: HTTPSConnectionPool(host='rnicrosoft.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000019F0F9507A0>: Failed to resolve 'rnicrosoft.com' ([Errno 11001] getaddrinfo failed)"))
+2026-04-09 15:48:58 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-09 15:48:58 | WARNING  | src.features.graph_features:extract:41 | Node rnicrosoft.com not found in graph. Returning default graph features.
+2026-04-09 15:48:58 | ERROR    | api.services.prediction_service:predict_single_url:188 | Critical error in PredictionService: X has 60 features, but StandardScaler is expecting 53 features as input.
+2026-04-09 15:48:58 | ERROR    | api.routes.predict:predict_url:28 | Prediction Pipeline Error: The phishing detection pipeline encountered an error: X has 60 features, but StandardScaler is expecting 53 features as input.
+2026-04-09 15:48:58 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63697 - "POST /api/v1/predict HTTP/1.1" 500
+2026-04-09 15:49:00 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-09 15:49:04 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 15:49:04 | INFO     | logging:callHandlers:1762 | 127.0.0.1:63699 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-09 15:50:42 | INFO     | logging:callHandlers:1762 | Shutting down
+2026-04-09 15:50:42 | INFO     | logging:callHandlers:1762 | Waiting for application shutdown.
+2026-04-09 15:50:42 | INFO     | logging:callHandlers:1762 | Application shutdown complete.
+2026-04-09 15:50:42 | INFO     | logging:callHandlers:1762 | Finished server process [18768]
+2026-04-09 15:50:55 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6379
+2026-04-09 15:50:58 | INFO     | logging:callHandlers:1762 | Started server process [9924]
+2026-04-09 15:50:58 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-09 15:51:02 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-09 15:51:02 | ERROR    | logging:callHandlers:1762 | Traceback (most recent call last):
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\allan\AppData\Roaming\Python\Python312\site-packages\starlette\routing.py", line 700, in lifespan
+    await receive()
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\lifespan\on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\queues.py", line 158, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2026-04-09 15:52:29 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6379
+2026-04-09 15:52:32 | INFO     | logging:callHandlers:1762 | Started server process [33408]
+2026-04-09 15:52:32 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-09 15:52:36 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-09 15:52:37 | INFO     | logging:callHandlers:1762 | 127.0.0.1:50866 - "GET /health HTTP/1.1" 200
+2026-04-09 15:52:37 | INFO     | logging:callHandlers:1762 | 127.0.0.1:50868 - "GET /health HTTP/1.1" 200
+2026-04-09 15:52:39 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-09 15:52:43 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 15:52:43 | INFO     | logging:callHandlers:1762 | 127.0.0.1:50869 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-09 15:52:49 | INFO     | logging:callHandlers:1762 | 127.0.0.1:50874 - "GET /health HTTP/1.1" 200
+2026-04-09 15:52:49 | INFO     | logging:callHandlers:1762 | 127.0.0.1:50875 - "GET /health HTTP/1.1" 200
+2026-04-09 15:52:51 | INFO     | api.services.prediction_service:__init__:39 | Initializing Prediction Service...
+2026-04-09 15:52:51 | INFO     | src.features.pipeline:__init__:14 | Initializing Feature Engineering Pipeline...
+2026-04-09 15:52:51 | INFO     | src.graph.builder:__init__:48 | Initialized empty TGIS Graph.
+2026-04-09 15:52:51 | INFO     | src.graph.builder:load_graph:122 | Trust graph loaded from: data/graphs/domain_graph.gpickle (74 nodes, 42 edges)
+2026-04-09 15:52:51 | INFO     | src.models.ensemble:__init__:20 | Loading Ensemble Models...
+2026-04-09 15:52:53 | SUCCESS  | src.models.ensemble:__init__:29 | Ensemble Models Loaded Successfully.
+2026-04-09 15:52:53 | INFO     | src.data.preprocessor:load:90 | Preprocessor models loaded from data/models
+2026-04-09 15:52:53 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for https://rnicrosoft.com
+2026-04-09 15:52:53 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://rnicrosoft.com ---
+2026-04-09 15:52:53 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://rnicrosoft.com ---
+2026-04-09 15:52:53 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: rnicrosoft.com
+2026-04-09 15:52:53 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: rnicrosoft.com
+2026-04-09 15:52:53 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for rnicrosoft.com: [Errno 11001] getaddrinfo failed
+2026-04-09 15:52:53 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://rnicrosoft.com
+2026-04-09 15:52:53 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://rnicrosoft.com: HTTPSConnectionPool(host='rnicrosoft.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000023B97A165A0>: Failed to resolve 'rnicrosoft.com' ([Errno 11001] getaddrinfo failed)"))
+2026-04-09 15:52:53 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-09 15:52:53 | WARNING  | src.features.graph_features:extract:41 | Node rnicrosoft.com not found in graph. Returning default graph features.
+2026-04-09 15:52:53 | ERROR    | api.services.prediction_service:predict_single_url:192 | Critical error in PredictionService: X has 60 features, but StandardScaler is expecting 53 features as input.
+2026-04-09 15:52:53 | ERROR    | api.routes.predict:predict_url:28 | Prediction Pipeline Error: The phishing detection pipeline encountered an error: X has 60 features, but StandardScaler is expecting 53 features as input.
+2026-04-09 15:52:53 | INFO     | logging:callHandlers:1762 | 127.0.0.1:50877 - "POST /api/v1/predict HTTP/1.1" 500
+2026-04-09 15:52:56 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-09 15:53:00 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 15:53:00 | INFO     | logging:callHandlers:1762 | 127.0.0.1:50879 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-09 16:00:09 | INFO     | src.models.random_forest:__init__:28 | Initialized PhishingRandomForest with 500 estimators.
+2026-04-09 16:00:09 | INFO     | src.models.xgboost_model:__init__:32 | Initialized PhishingXGBoost with histogram-based tree method.
+2026-04-09 16:00:09 | INFO     | __main__:train_all:39 | --- 🚀 Initializing Model Training Pipeline ---
+2026-04-09 16:00:09 | INFO     | __main__:train_all:42 | Loading training and testing datasets...
+2026-04-09 16:00:09 | INFO     | src.data.loader:load_data:33 | Loaded Parquet dataset: data/processed\train.parquet (33 rows)
+2026-04-09 16:00:09 | INFO     | src.data.loader:load_data:33 | Loaded Parquet dataset: data/processed\test.parquet (9 rows)
+2026-04-09 16:00:09 | INFO     | __main__:train_all:54 | Standardizing training schema (60 columns)...
+2026-04-09 16:00:09 | INFO     | __main__:train_all:64 | Preprocessing and Normalizing Feature Vectors...
+2026-04-09 16:00:09 | INFO     | src.data.preprocessor:fit_transform:30 | Preprocessing 60 features for 33 samples...
+2026-04-09 16:00:09 | SUCCESS  | src.data.preprocessor:fit_transform:42 | Data preprocessing completed (Fit & Transform).
+2026-04-09 16:00:09 | INFO     | src.data.preprocessor:save:68 | Preprocessor models saved to data/models
+2026-04-09 16:00:09 | INFO     | src.data.splitter:train_val_test_split:29 | Splitting data (70/15/15) for 33 samples...
+2026-04-09 16:00:09 | SUCCESS  | src.data.splitter:train_val_test_split:43 | Split completed: Train(25), Val(4), Test(4)
+2026-04-09 16:00:09 | INFO     | src.data.splitter:apply_smote:59 | Applying SMOTE to balance training classes...
+2026-04-09 16:00:09 | INFO     | src.data.splitter:apply_smote:76 | Small minority class detected (2). Adjusting SMOTE k_neighbors to 1.
+2026-04-09 16:00:09 | SUCCESS  | src.data.splitter:apply_smote:83 | SMOTE applied. Balanced distribution: {0: 23, 1: 23}
+2026-04-09 16:00:09 | INFO     | __main__:train_all:82 | Training Random Forest...
+2026-04-09 16:00:09 | INFO     | src.models.random_forest:fit:32 | Training Random Forest on 46 samples...
+2026-04-09 16:00:10 | SUCCESS  | src.models.random_forest:fit:35 | RF Training Complete. OOB Score: 1.0000
+2026-04-09 16:00:10 | INFO     | __main__:train_all:86 | Training XGBoost...
+2026-04-09 16:00:10 | INFO     | src.models.xgboost_model:fit:39 | Training XGBoost on 46 samples...
+2026-04-09 16:00:10 | INFO     | src.models.xgboost_model:fit:42 | Early stopping enabled for XGBoost training.
+2026-04-09 16:00:12 | SUCCESS  | src.models.xgboost_model:fit:51 | XGBoost Training Complete.
+2026-04-09 16:00:12 | INFO     | __main__:_evaluate_and_log:101 | 
+==================================================
+📈 FINAL TEST SET EVALUATION
+==================================================
+2026-04-09 16:00:12 | INFO     | __main__:_evaluate_and_log:116 | [Random Forest] Acc: 0.8889 | F1: 0.0000 | AUC: 1.0000
+2026-04-09 16:00:12 | INFO     | __main__:_evaluate_and_log:116 | [XGBoost] Acc: 0.8889 | F1: 0.0000 | AUC: 0.3750
+2026-04-09 16:00:12 | INFO     | __main__:train_all:93 | Saving model artifacts to data/models...
+2026-04-09 16:00:12 | SUCCESS  | __main__:train_all:97 | 🎉 Model Training Pipeline Completed Successfully.
+2026-04-09 16:01:18 | INFO     | logging:callHandlers:1762 | Shutting down
+2026-04-09 16:01:18 | INFO     | logging:callHandlers:1762 | Waiting for application shutdown.
+2026-04-09 16:01:18 | INFO     | logging:callHandlers:1762 | Application shutdown complete.
+2026-04-09 16:01:18 | INFO     | logging:callHandlers:1762 | Finished server process [33408]
+2026-04-09 16:01:32 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6379
+2026-04-09 16:01:34 | INFO     | logging:callHandlers:1762 | Started server process [28548]
+2026-04-09 16:01:34 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-09 16:01:38 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-09 16:02:42 | INFO     | logging:callHandlers:1762 | Shutting down
+2026-04-09 16:02:42 | INFO     | logging:callHandlers:1762 | Finished server process [28548]
+2026-04-09 16:02:42 | ERROR    | logging:callHandlers:1762 | Traceback (most recent call last):
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 674, in run_until_complete
+    self.run_forever()
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 641, in run_forever
+    self._run_once()
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1987, in _run_once
+    handle._run()
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\server.py", line 68, in serve
+    with self.capture_signals():
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 144, in __exit__
+    next(self.gen)
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\server.py", line 328, in capture_signals
+    signal.raise_signal(captured_signal)
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 157, in _on_sigint
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\allan\AppData\Roaming\Python\Python312\site-packages\starlette\routing.py", line 700, in lifespan
+    await receive()
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\lifespan\on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allan\AppData\Local\Programs\Python\Python312\Lib\asyncio\queues.py", line 158, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2026-04-09 16:02:49 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6379
+2026-04-09 16:02:51 | INFO     | logging:callHandlers:1762 | Started server process [21940]
+2026-04-09 16:02:51 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-09 16:02:55 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-09 16:02:56 | INFO     | logging:callHandlers:1762 | 127.0.0.1:54871 - "GET /health HTTP/1.1" 200
+2026-04-09 16:02:56 | INFO     | logging:callHandlers:1762 | 127.0.0.1:54873 - "GET /health HTTP/1.1" 200
+2026-04-09 16:02:58 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-09 16:02:58 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-09 16:03:02 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 16:03:02 | INFO     | logging:callHandlers:1762 | 127.0.0.1:58209 - "GET /health HTTP/1.1" 200
+2026-04-09 16:03:02 | INFO     | logging:callHandlers:1762 | 127.0.0.1:54875 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-09 16:03:02 | INFO     | logging:callHandlers:1762 | 127.0.0.1:58210 - "GET /health HTTP/1.1" 200
+2026-04-09 16:03:02 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 16:03:02 | INFO     | logging:callHandlers:1762 | 127.0.0.1:54877 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-09 16:03:04 | INFO     | api.services.prediction_service:__init__:39 | Initializing Prediction Service...
+2026-04-09 16:03:04 | INFO     | src.features.pipeline:__init__:14 | Initializing Feature Engineering Pipeline...
+2026-04-09 16:03:04 | INFO     | src.graph.builder:__init__:48 | Initialized empty TGIS Graph.
+2026-04-09 16:03:04 | INFO     | src.graph.builder:load_graph:122 | Trust graph loaded from: data/graphs/domain_graph.gpickle (74 nodes, 42 edges)
+2026-04-09 16:03:04 | INFO     | src.models.ensemble:__init__:20 | Loading Ensemble Models...
+2026-04-09 16:03:06 | SUCCESS  | src.models.ensemble:__init__:29 | Ensemble Models Loaded Successfully.
+2026-04-09 16:03:06 | INFO     | src.data.preprocessor:load:90 | Preprocessor models loaded from data/models
+2026-04-09 16:03:06 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for https://rnicrosoft.com
+2026-04-09 16:03:06 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://rnicrosoft.com ---
+2026-04-09 16:03:06 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://rnicrosoft.com ---
+2026-04-09 16:03:06 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: rnicrosoft.com
+2026-04-09 16:03:06 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: rnicrosoft.com
+2026-04-09 16:03:06 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for rnicrosoft.com: [Errno 11001] getaddrinfo failed
+2026-04-09 16:03:06 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://rnicrosoft.com
+2026-04-09 16:03:06 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://rnicrosoft.com: HTTPSConnectionPool(host='rnicrosoft.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024FF9F70FE0>: Failed to resolve 'rnicrosoft.com' ([Errno 11001] getaddrinfo failed)"))
+2026-04-09 16:03:06 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-09 16:03:06 | WARNING  | src.features.graph_features:extract:41 | Node rnicrosoft.com not found in graph. Returning default graph features.
+2026-04-09 16:03:06 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-09 16:03:06 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-09 16:03:06 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://rnicrosoft.com
+2026-04-09 16:03:06 | SUCCESS  | api.services.prediction_service:predict_single_url:152 | --- ✅ Prediction Completed: PHISHING ---
+2026-04-09 16:03:10 | ERROR    | api.services.prediction_service:predict_single_url:182 | Database persistence failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 16:03:10 | INFO     | logging:callHandlers:1762 | 127.0.0.1:58212 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-09 16:03:13 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-09 16:03:17 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 16:03:17 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60008 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-09 16:03:23 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60013 - "GET /health HTTP/1.1" 200
+2026-04-09 16:03:25 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-09 16:03:29 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 16:03:29 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60015 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-09 16:03:45 | INFO     | logging:callHandlers:1762 | 127.0.0.1:54107 - "GET /health HTTP/1.1" 200
+2026-04-09 16:03:47 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for https://microsoft.com
+2026-04-09 16:03:47 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://microsoft.com ---
+2026-04-09 16:03:47 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://microsoft.com ---
+2026-04-09 16:03:47 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: microsoft.com
+2026-04-09 16:03:47 | INFO     | src.external.whois_client:lookup:32 | Performing WHOIS lookup for domain: microsoft.com
+2026-04-09 16:03:51 | INFO     | src.external.dns_resolver:resolve:31 | Resolving DNS records for domain: microsoft.com
+2026-04-09 16:04:05 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: microsoft.com
+2026-04-09 16:04:05 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://microsoft.com
+2026-04-09 16:04:06 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-09 16:04:06 | WARNING  | src.features.graph_features:extract:41 | Node microsoft.com not found in graph. Returning default graph features.
+2026-04-09 16:04:06 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-09 16:04:06 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-09 16:04:06 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://microsoft.com
+2026-04-09 16:04:06 | SUCCESS  | api.services.prediction_service:predict_single_url:152 | --- ✅ Prediction Completed: SAFE ---
+2026-04-09 16:04:10 | ERROR    | api.services.prediction_service:predict_single_url:182 | Database persistence failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 16:04:10 | INFO     | logging:callHandlers:1762 | 127.0.0.1:54109 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-09 16:04:12 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-09 16:04:16 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 16:04:16 | INFO     | logging:callHandlers:1762 | 127.0.0.1:54124 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-09 16:11:23 | INFO     | logging:callHandlers:1762 | 127.0.0.1:57743 - "GET /health HTTP/1.1" 200
+2026-04-09 16:11:25 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-09 16:11:29 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 16:11:29 | INFO     | logging:callHandlers:1762 | 127.0.0.1:57745 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-09 16:11:53 | INFO     | logging:callHandlers:1762 | 127.0.0.1:49311 - "GET /health HTTP/1.1" 200
+2026-04-09 16:11:53 | INFO     | logging:callHandlers:1762 | 127.0.0.1:49312 - "GET /health HTTP/1.1" 200
+2026-04-09 16:11:55 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for https://microsoft.com
+2026-04-09 16:11:55 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://microsoft.com ---
+2026-04-09 16:11:55 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://microsoft.com ---
+2026-04-09 16:11:55 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: microsoft.com
+2026-04-09 16:11:55 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://microsoft.com
+2026-04-09 16:11:55 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-09 16:11:55 | WARNING  | src.features.graph_features:extract:41 | Node microsoft.com not found in graph. Returning default graph features.
+2026-04-09 16:11:55 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-09 16:11:55 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-09 16:11:55 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://microsoft.com
+2026-04-09 16:11:55 | SUCCESS  | api.services.prediction_service:predict_single_url:152 | --- ✅ Prediction Completed: SAFE ---
+2026-04-09 16:12:00 | ERROR    | api.services.prediction_service:predict_single_url:182 | Database persistence failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 16:12:00 | INFO     | logging:callHandlers:1762 | 127.0.0.1:49314 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-09 16:12:02 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-09 16:12:06 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 16:12:06 | INFO     | logging:callHandlers:1762 | 127.0.0.1:49320 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-09 16:27:15 | INFO     | logging:callHandlers:1762 | 127.0.0.1:64115 - "GET /health HTTP/1.1" 200
+2026-04-09 16:27:17 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-09 16:27:17 | INFO     | logging:callHandlers:1762 | 127.0.0.1:64655 - "GET /health HTTP/1.1" 200
+2026-04-09 16:27:19 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-09 16:27:21 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 16:27:21 | INFO     | logging:callHandlers:1762 | 127.0.0.1:64653 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-09 16:27:23 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 16:27:23 | INFO     | logging:callHandlers:1762 | 127.0.0.1:62167 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-09 20:33:01 | INFO     | logging:callHandlers:1762 | Shutting down
+2026-04-09 20:33:01 | INFO     | logging:callHandlers:1762 | Waiting for application shutdown.
+2026-04-09 20:33:01 | INFO     | logging:callHandlers:1762 | Application shutdown complete.
+2026-04-09 20:33:01 | INFO     | logging:callHandlers:1762 | Finished server process [21940]
+2026-04-10 07:56:33 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6379
+2026-04-10 07:56:41 | INFO     | logging:callHandlers:1762 | Started server process [25844]
+2026-04-10 07:56:41 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-10 07:56:45 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-10 07:57:02 | INFO     | logging:callHandlers:1762 | 127.0.0.1:62065 - "GET /health HTTP/1.1" 200
+2026-04-10 07:57:04 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-10 07:57:08 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-10 07:57:08 | INFO     | logging:callHandlers:1762 | 127.0.0.1:62067 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-10 07:57:10 | INFO     | logging:callHandlers:1762 | 127.0.0.1:62073 - "GET /health HTTP/1.1" 200
+2026-04-10 07:57:10 | INFO     | logging:callHandlers:1762 | 127.0.0.1:62074 - "GET /health HTTP/1.1" 200
+2026-04-10 07:57:12 | INFO     | api.services.prediction_service:__init__:39 | Initializing Prediction Service...
+2026-04-10 07:57:12 | INFO     | src.features.pipeline:__init__:14 | Initializing Feature Engineering Pipeline...
+2026-04-10 07:57:12 | INFO     | src.graph.builder:__init__:48 | Initialized empty TGIS Graph.
+2026-04-10 07:57:12 | INFO     | src.graph.builder:load_graph:122 | Trust graph loaded from: data/graphs/domain_graph.gpickle (74 nodes, 42 edges)
+2026-04-10 07:57:12 | INFO     | src.models.ensemble:__init__:20 | Loading Ensemble Models...
+2026-04-10 07:57:15 | SUCCESS  | src.models.ensemble:__init__:29 | Ensemble Models Loaded Successfully.
+2026-04-10 07:57:15 | INFO     | src.data.preprocessor:load:90 | Preprocessor models loaded from data/models
+2026-04-10 07:57:15 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for https://rnicrosoft.com
+2026-04-10 07:57:15 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://rnicrosoft.com ---
+2026-04-10 07:57:15 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://rnicrosoft.com ---
+2026-04-10 07:57:15 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: rnicrosoft.com
+2026-04-10 07:57:15 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: rnicrosoft.com
+2026-04-10 07:57:15 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for rnicrosoft.com: [Errno 11001] getaddrinfo failed
+2026-04-10 07:57:15 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://rnicrosoft.com
+2026-04-10 07:57:15 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://rnicrosoft.com: HTTPSConnectionPool(host='rnicrosoft.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D64A89D880>: Failed to resolve 'rnicrosoft.com' ([Errno 11001] getaddrinfo failed)"))
+2026-04-10 07:57:15 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-10 07:57:15 | WARNING  | src.features.graph_features:extract:41 | Node rnicrosoft.com not found in graph. Returning default graph features.
+2026-04-10 07:57:15 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-10 07:57:15 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-10 07:57:15 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://rnicrosoft.com
+2026-04-10 07:57:15 | SUCCESS  | api.services.prediction_service:predict_single_url:152 | --- ✅ Prediction Completed: PHISHING ---
+2026-04-10 07:57:19 | ERROR    | api.services.prediction_service:predict_single_url:182 | Database persistence failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-10 07:57:19 | INFO     | logging:callHandlers:1762 | 127.0.0.1:62076 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-10 07:57:22 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-10 07:57:26 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-10 07:57:26 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56953 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-10 08:03:18 | INFO     | logging:callHandlers:1762 | Shutting down
+2026-04-10 08:03:19 | INFO     | logging:callHandlers:1762 | Waiting for application shutdown.
+2026-04-10 08:03:19 | INFO     | logging:callHandlers:1762 | Application shutdown complete.
+2026-04-10 08:03:19 | INFO     | logging:callHandlers:1762 | Finished server process [25844]
+2026-04-10 08:03:33 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6379
+2026-04-10 08:03:35 | INFO     | logging:callHandlers:1762 | Started server process [30900]
+2026-04-10 08:03:35 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-10 08:03:35 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-10 08:04:14 | INFO     | logging:callHandlers:1762 | Shutting down
+2026-04-10 08:04:14 | INFO     | logging:callHandlers:1762 | Waiting for application shutdown.
+2026-04-10 08:04:14 | INFO     | logging:callHandlers:1762 | Application shutdown complete.
+2026-04-10 08:04:14 | INFO     | logging:callHandlers:1762 | Finished server process [30900]
+2026-04-10 08:04:42 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6379
+2026-04-10 08:04:44 | INFO     | logging:callHandlers:1762 | Started server process [6760]
+2026-04-10 08:04:44 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-10 08:04:44 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-10 08:04:49 | INFO     | logging:callHandlers:1762 | 127.0.0.1:61274 - "GET /health HTTP/1.1" 200
+2026-04-10 08:04:51 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-10 08:04:51 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "phishing_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-10 08:04:51 | INFO     | logging:callHandlers:1762 | 127.0.0.1:58435 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-10 08:06:13 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56229 - "GET /health HTTP/1.1" 200
+2026-04-10 08:06:13 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56230 - "GET /health HTTP/1.1" 200
+2026-04-10 08:06:15 | INFO     | api.services.prediction_service:__init__:39 | Initializing Prediction Service...
+2026-04-10 08:06:15 | INFO     | src.features.pipeline:__init__:14 | Initializing Feature Engineering Pipeline...
+2026-04-10 08:06:15 | INFO     | src.graph.builder:__init__:48 | Initialized empty TGIS Graph.
+2026-04-10 08:06:15 | INFO     | src.graph.builder:load_graph:122 | Trust graph loaded from: data/graphs/domain_graph.gpickle (74 nodes, 42 edges)
+2026-04-10 08:06:15 | INFO     | src.models.ensemble:__init__:20 | Loading Ensemble Models...
+2026-04-10 08:06:17 | SUCCESS  | src.models.ensemble:__init__:29 | Ensemble Models Loaded Successfully.
+2026-04-10 08:06:17 | INFO     | src.data.preprocessor:load:90 | Preprocessor models loaded from data/models
+2026-04-10 08:06:17 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for https://rnicrosoft.com
+2026-04-10 08:06:17 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://rnicrosoft.com ---
+2026-04-10 08:06:17 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://rnicrosoft.com ---
+2026-04-10 08:06:17 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: rnicrosoft.com
+2026-04-10 08:06:17 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: rnicrosoft.com
+2026-04-10 08:06:17 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for rnicrosoft.com: [Errno 11001] getaddrinfo failed
+2026-04-10 08:06:17 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://rnicrosoft.com
+2026-04-10 08:06:17 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://rnicrosoft.com: HTTPSConnectionPool(host='rnicrosoft.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E748287080>: Failed to resolve 'rnicrosoft.com' ([Errno 11001] getaddrinfo failed)"))
+2026-04-10 08:06:17 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-10 08:06:17 | WARNING  | src.features.graph_features:extract:41 | Node rnicrosoft.com not found in graph. Returning default graph features.
+2026-04-10 08:06:17 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-10 08:06:17 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-10 08:06:17 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://rnicrosoft.com
+2026-04-10 08:06:17 | SUCCESS  | api.services.prediction_service:predict_single_url:152 | --- ✅ Prediction Completed: PHISHING ---
+2026-04-10 08:06:17 | ERROR    | api.services.prediction_service:predict_single_url:182 | Database persistence failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "phishing_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-10 08:06:17 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56232 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-10 08:06:19 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-10 08:06:19 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "phishing_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-10 08:06:19 | INFO     | logging:callHandlers:1762 | 127.0.0.1:56235 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-10 08:06:29 | INFO     | logging:callHandlers:1762 | 127.0.0.1:57022 - "GET /health HTTP/1.1" 200
+2026-04-10 08:06:31 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for https://rnicrosoft.com
+2026-04-10 08:06:31 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://rnicrosoft.com ---
+2026-04-10 08:06:31 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://rnicrosoft.com ---
+2026-04-10 08:06:31 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: rnicrosoft.com
+2026-04-10 08:06:31 | INFO     | src.external.ssl_checker:check:34 | Checking SSL certificate for domain: rnicrosoft.com
+2026-04-10 08:06:31 | ERROR    | src.external.ssl_checker:check:62 | Network error checking SSL for rnicrosoft.com: [Errno 11001] getaddrinfo failed
+2026-04-10 08:06:31 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://rnicrosoft.com
+2026-04-10 08:06:31 | WARNING  | src.features.content_features:extract:130 | Failed to extract content features for https://rnicrosoft.com: HTTPSConnectionPool(host='rnicrosoft.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E74822F410>: Failed to resolve 'rnicrosoft.com' ([Errno 11001] getaddrinfo failed)"))
+2026-04-10 08:06:31 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-10 08:06:31 | WARNING  | src.features.graph_features:extract:41 | Node rnicrosoft.com not found in graph. Returning default graph features.
+2026-04-10 08:06:31 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-10 08:06:31 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-10 08:06:31 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://rnicrosoft.com
+2026-04-10 08:06:31 | SUCCESS  | api.services.prediction_service:predict_single_url:152 | --- ✅ Prediction Completed: PHISHING ---
+2026-04-10 08:06:31 | ERROR    | api.services.prediction_service:predict_single_url:182 | Database persistence failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "phishing_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-10 08:06:31 | INFO     | logging:callHandlers:1762 | 127.0.0.1:57024 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-10 08:06:34 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-10 08:06:34 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "phishing_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-10 08:06:34 | INFO     | logging:callHandlers:1762 | 127.0.0.1:50628 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-10 08:08:51 | INFO     | logging:callHandlers:1762 | 127.0.0.1:57424 - "GET /health HTTP/1.1" 200
+2026-04-10 08:08:53 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-10 08:08:53 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "phishing_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-10 08:08:53 | INFO     | logging:callHandlers:1762 | 127.0.0.1:57426 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-10 08:08:59 | INFO     | logging:callHandlers:1762 | 127.0.0.1:57430 - "GET /health HTTP/1.1" 200
+2026-04-10 08:08:59 | INFO     | logging:callHandlers:1762 | 127.0.0.1:57431 - "GET /health HTTP/1.1" 200
+2026-04-10 08:09:01 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for https://microsoft.com
+2026-04-10 08:09:01 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://microsoft.com ---
+2026-04-10 08:09:01 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://microsoft.com ---
+2026-04-10 08:09:01 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: microsoft.com
+2026-04-10 08:09:01 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://microsoft.com
+2026-04-10 08:09:02 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-10 08:09:02 | WARNING  | src.features.graph_features:extract:41 | Node microsoft.com not found in graph. Returning default graph features.
+2026-04-10 08:09:02 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-10 08:09:02 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-10 08:09:02 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://microsoft.com
+2026-04-10 08:09:02 | SUCCESS  | api.services.prediction_service:predict_single_url:152 | --- ✅ Prediction Completed: SAFE ---
+2026-04-10 08:09:02 | ERROR    | api.services.prediction_service:predict_single_url:182 | Database persistence failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "phishing_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-10 08:09:02 | INFO     | logging:callHandlers:1762 | 127.0.0.1:57433 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-10 08:09:04 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-10 08:09:04 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "phishing_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-10 08:09:04 | INFO     | logging:callHandlers:1762 | 127.0.0.1:57438 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-10 08:09:08 | INFO     | logging:callHandlers:1762 | Shutting down
+2026-04-10 08:09:08 | INFO     | logging:callHandlers:1762 | Waiting for application shutdown.
+2026-04-10 08:09:08 | INFO     | logging:callHandlers:1762 | Application shutdown complete.
+2026-04-10 08:09:08 | INFO     | logging:callHandlers:1762 | Finished server process [6760]
+2026-04-10 08:19:10 | INFO     | src.external.cache_manager:__init__:24 | Redis Cache initialized at localhost:6379
+2026-04-10 08:19:12 | INFO     | logging:callHandlers:1762 | Started server process [26480]
+2026-04-10 08:19:12 | INFO     | logging:callHandlers:1762 | Waiting for application startup.
+2026-04-10 08:19:12 | INFO     | logging:callHandlers:1762 | Application startup complete.
+2026-04-10 08:19:13 | INFO     | logging:callHandlers:1762 | 127.0.0.1:65383 - "GET /health HTTP/1.1" 200
+2026-04-10 08:19:15 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-10 08:19:15 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "phishing_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-10 08:19:15 | INFO     | logging:callHandlers:1762 | 127.0.0.1:65385 - "GET /api/v1/history HTTP/1.1" 200
+2026-04-10 09:09:56 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60990 - "GET /health HTTP/1.1" 200
+2026-04-10 09:09:56 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60991 - "GET /health HTTP/1.1" 200
+2026-04-10 09:09:58 | INFO     | api.services.prediction_service:__init__:39 | Initializing Prediction Service...
+2026-04-10 09:09:58 | INFO     | src.features.pipeline:__init__:14 | Initializing Feature Engineering Pipeline...
+2026-04-10 09:09:58 | INFO     | src.graph.builder:__init__:48 | Initialized empty TGIS Graph.
+2026-04-10 09:09:58 | INFO     | src.graph.builder:load_graph:122 | Trust graph loaded from: data/graphs/domain_graph.gpickle (74 nodes, 42 edges)
+2026-04-10 09:09:58 | INFO     | src.models.ensemble:__init__:20 | Loading Ensemble Models...
+2026-04-10 09:10:00 | SUCCESS  | src.models.ensemble:__init__:29 | Ensemble Models Loaded Successfully.
+2026-04-10 09:10:00 | INFO     | src.data.preprocessor:load:90 | Preprocessor models loaded from data/models
+2026-04-10 09:10:00 | INFO     | api.routes.predict:predict_url:22 | API Request: POST /api/v1/predict for https://microsoft.com
+2026-04-10 09:10:00 | INFO     | api.services.prediction_service:predict_single_url:63 | --- 🛡️ Starting Prediction Request: https://microsoft.com ---
+2026-04-10 09:10:00 | INFO     | src.features.pipeline:extract_all:29 | --- 🌀 Pipeline Execution Started: https://microsoft.com ---
+2026-04-10 09:10:00 | INFO     | src.features.domain_features:extract:49 | Extracting domain features for: microsoft.com
+2026-04-10 09:10:00 | INFO     | src.features.content_features:extract:34 | Extracting content features for: https://microsoft.com
+2026-04-10 09:10:00 | INFO     | src.features.pipeline:extract_all:43 | --- ✅ Pipeline Execution Completed. Total Features: 50 ---
+2026-04-10 09:10:00 | WARNING  | src.features.graph_features:extract:41 | Node microsoft.com not found in graph. Returning default graph features.
+2026-04-10 09:10:00 | INFO     | src.graph.trust_propagation:calculate_trust_score:21 | Starting Trust Propagation (Iterations: 10, Damping: 0.3)
+2026-04-10 09:10:00 | SUCCESS  | src.graph.trust_propagation:calculate_trust_score:74 | Trust Propagation completed for all nodes.
+2026-04-10 09:10:00 | INFO     | src.external.safe_browsing:check_url:23 | Checking Google Safe Browsing for: https://microsoft.com
+2026-04-10 09:10:00 | SUCCESS  | api.services.prediction_service:predict_single_url:152 | --- ✅ Prediction Completed: SAFE ---
+2026-04-10 09:10:01 | ERROR    | api.services.prediction_service:predict_single_url:182 | Database persistence failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "phishing_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-10 09:10:01 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60993 - "POST /api/v1/predict HTTP/1.1" 200
+2026-04-10 09:10:03 | INFO     | api.routes.history:get_history:16 | API Request: GET /api/v1/history
+2026-04-10 09:10:03 | ERROR    | api.routes.history:get_history:27 | Failed to fetch analysis history: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "phishing_user"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-10 09:10:03 | INFO     | logging:callHandlers:1762 | 127.0.0.1:60999 - "GET /api/v1/history HTTP/1.1" 200

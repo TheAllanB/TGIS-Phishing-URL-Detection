@@ -20,15 +20,18 @@ class DataPreprocessor:
     def fit_transform(self, X: pd.DataFrame) -> np.ndarray:
         """
         Fit the preprocessor on X and return transformed data.
-        
+
         Args:
             X (pd.DataFrame): Input features.
-            
+
         Returns:
             np.ndarray: Imputed and scaled features.
         """
         log.info(f"Preprocessing {X.shape[1]} features for {X.shape[0]} samples...")
-        
+
+        # Cast to float64 so the imputer's fill_value dtype always matches
+        X = X.apply(pd.to_numeric, errors='coerce').astype(np.float64)
+
         # 1. Impute missing values (e.g., failed WHOIS/Content scrapes)
         X_imputed = self.imputer.fit_transform(X)
         
@@ -44,7 +47,11 @@ class DataPreprocessor:
         if not self.is_fitted:
             log.error("Preprocessor not fitted. Call fit_transform first.")
             return None
-            
+
+        # Cast to float64 so dtype matches what the imputer was fit on.
+        # Non-numeric values (None, strings) become NaN, then imputed with fill_value=-1.
+        X = X.apply(pd.to_numeric, errors='coerce').astype(np.float64)
+
         X_imputed = self.imputer.transform(X)
         X_scaled = self.scaler.transform(X_imputed)
         return X_scaled
@@ -67,6 +74,18 @@ class DataPreprocessor:
         try:
             self.imputer = joblib.load(os.path.join(directory, 'imputer.joblib'))
             self.scaler = joblib.load(os.path.join(directory, 'scaler.joblib'))
+
+            # Patch cross-version dtype incompatibility (models saved with sklearn 1.8.0,
+            # loaded under sklearn 1.5.x).  The imputer's internal `statistics_` array
+            # may be stored as dtype('O'), which sklearn 1.5.x rejects during transform.
+            if hasattr(self.imputer, 'statistics_') and self.imputer.statistics_ is not None:
+                self.imputer.statistics_ = np.array(self.imputer.statistics_, dtype=np.float64)
+            if hasattr(self.imputer, 'fill_value') and self.imputer.fill_value is not None:
+                try:
+                    self.imputer.fill_value = float(self.imputer.fill_value)
+                except (TypeError, ValueError):
+                    self.imputer.fill_value = -1.0
+
             self.is_fitted = True
             log.info(f"Preprocessor models loaded from {directory}")
         except Exception as e:
