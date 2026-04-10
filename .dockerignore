@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment & secrets
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+
+# Dev artifacts
+.git/
+.gitignore
+test_out*.txt
+build_out.txt
+pytest_*.txt
+pytest.ini
+
+# Docs
+docs/
+*.md
+
+# Tests (not needed at runtime)
+tests/
+scripts/test_*.py
+test_safe_browsing.py
+
+# IDE
+.vscode/
+.idea/

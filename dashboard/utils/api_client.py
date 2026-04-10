@@ -1,11 +1,15 @@
+import os
 import requests
-from typing import Dict, Any, Optional
+from typing import Dict, Any
+
+_DEFAULT_BASE_URL = "http://localhost:8000"
+
 
 class APIClient:
     """Helper client for communicating with the FastAPI backend."""
-    
-    def __init__(self, base_url: str = "http://localhost:8000"):
-        self.base_url = base_url
+
+    def __init__(self):
+        self.base_url = os.getenv("API_BASE_URL", _DEFAULT_BASE_URL).rstrip("/")
 
     def predict_url(self, url: str) -> Dict[str, Any]:
         """Request a single URL prediction from the backend."""
@@ -13,12 +17,12 @@ class APIClient:
             payload = {
                 "url": url,
                 "include_explanation": True,
-                "fetch_content": True
+                "fetch_content": True,
             }
             response = requests.post(
-                f"{self.base_url}/api/v1/predict", 
-                json=payload, 
-                timeout=60 # Extended for deep network analysis
+                f"{self.base_url}/api/v1/predict",
+                json=payload,
+                timeout=60,
             )
             if response.status_code == 200:
                 return response.json()
@@ -33,5 +37,5 @@ class APIClient:
             if response.status_code == 200:
                 return response.json()
             return {"status": "error"}
-        except:
+        except Exception:
             return {"status": "offline"}

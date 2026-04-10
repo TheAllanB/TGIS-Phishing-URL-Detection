@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.routes import predict, health, history
+from src.core.config import settings
 
 # Initializing FastAPI application following ARCHITECTURE.md specifications
 app = FastAPI(
@@ -24,7 +25,7 @@ def setup_database():
 # CORS Configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[settings.ALLOWED_ORIGIN, "http://localhost:8501"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]

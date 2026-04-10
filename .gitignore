@@ -1,4 +1,28 @@
 CLAUDE.md
 .claude
 .env
-.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Logs
+logs/
+*.log
+
+# Test output artifacts
+test_out*.txt
+build_out.txt
+pytest_*.txt
+
+# OS
+.DS_Store
+Thumbs.db

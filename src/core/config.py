@@ -38,6 +38,9 @@ class Settings(BaseSettings):
     ALGORITHM: str = Field(default="HS256", env="ALGORITHM")
     ACCESS_TOKEN_EXPIRE_MINUTES: int = Field(default=30, env="ACCESS_TOKEN_EXPIRE_MINUTES")
 
+    # CORS
+    ALLOWED_ORIGIN: str = Field(default="http://localhost:8501", env="ALLOWED_ORIGIN")
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
