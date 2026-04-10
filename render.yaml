@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: tgis-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile.api
+    region: singapore
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: SAFE_BROWSING_API_KEY
+        sync: false
+      - key: SECRET_KEY
+        sync: false
+      - key: ALLOWED_ORIGIN
+        sync: false
+      - key: DEBUG
+        value: "False"
+
+  - type: web
+    name: tgis-dashboard
+    runtime: docker
+    dockerfilePath: ./Dockerfile.dashboard
+    region: singapore
+    plan: free
+    envVars:
+      - key: API_BASE_URL
+        sync: false
